@@ -444,6 +444,23 @@ svg .taga{fill:#D9930C;rx:2}
   .lawcard{padding:11px 12px}
 }
 
+
+/* 名詞解說 */
+.gl-bar{padding:4px 0 10px;margin-bottom:4px}
+#glq{width:100%;font:inherit;font-size:15px;padding:9px 12px;border:1px solid var(--rule);background:var(--sheet);border-radius:2px}
+.gl-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.gl-c{font:inherit;font-size:12.5px;padding:4px 10px;border:1px solid var(--rule);background:var(--sheet);color:var(--ink);border-radius:999px;cursor:pointer}
+.gl-c.on{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.gl-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
+.gl{background:var(--sheet);border:1px solid var(--rule);border-left:4px solid var(--blue);padding:12px 13px 11px}
+.gl-t{font-weight:700;font-size:15.5px;line-height:1.4}
+.gl-ab{display:block;font-family:var(--mono);font-size:11.5px;font-weight:400;color:var(--blue);letter-spacing:.04em;margin-top:2px}
+.gl-d{font-size:13.5px;margin-top:6px;line-height:1.7}
+.gl-s{font-size:12px;color:var(--ink-2);margin-top:6px;padding-top:6px;border-top:1px dotted var(--rule-2)}
+.gl-m{font-size:13px;margin-top:7px;padding:5px 8px;background:#FFF6DF;border-left:3px solid var(--amber);font-weight:700}
+.gl .spkbox{margin-top:8px}
+.gl-m::before{content:"口訣　";font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--amber);font-weight:400}
+@media (max-width:520px){.gl-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -466,6 +483,7 @@ svg .taga{fill:#D9930C;rx:2}
       <a href="#tables">03 對照表</a>
       <a href="#traps">04 易混淆</a>
       <a href="#mn">05 口訣</a>
+      <a href="#gloss">05B 名詞</a>
       <a href="#chapters">06 分章複習</a>
       <a href="#calc">07 計算題</a>
       <a href="#exam">08 自我測驗</a>
@@ -499,7 +517,7 @@ svg .taga{fill:#D9930C;rx:2}
   <div class="h2sub">法規更新警示</div>
   <div style="background:var(--sheet);border:1px solid var(--rule);border-top:5px solid var(--red);padding:18px 20px;border-radius:2px">
     <p style="margin-top:0;font-size:15px"><b style="color:var(--red)">你手上那份 2026 年 1 月版，法源已經動過了。</b></p>
-    <p style="font-size:14px;line-height:1.85">《職業安全衛生法》於 <span class="k">114 年 12 月 19 日</span>由總統修正公布，共修正 <span class="k">25 條（含新增 6 條）</span>，經行政院核定自 <span class="k">115 年 7 月 1 日</span>正式施行——也就是本月初剛上路。同時有 <span class="k">11 部子法</span>配套完成修訂（修正 7 部、新訂 4 部），其中 6 部就是你這份講義的主要章節來源。</p>
+    <p style="font-size:14px;line-height:1.85">《職業安全衛生法》於 <span class="k">114 年 12 月 19 日</span>由總統修正公布，共修正 <span class="k">25 條（含新增 6 條）</span>，經行政院核定自 <span class="k">115 年 7 月 1 日</span>正式施行（截至 115/11/7 已上路滿四個月）。同時有 <span class="k">11 部子法</span>配套完成修訂（修正 7 部、新訂 4 部），其中 6 部就是你這份講義的主要章節來源。</p>
     <p style="font-size:14px;margin-bottom:0">好消息是：講義已經寫進了職場霸凌專章（§22-1～22-3）、§15-1 工程規劃設計安全分析、§27-1 整體工程統合管理，代表編者已依修正公布條文更新。<b>需要補的是子法層級，以及 6 月 23 日才發布的兩部新準則。</b></p>
   </div>
 
@@ -523,7 +541,7 @@ svg .taga{fill:#D9930C;rx:2}
         <tr><td>營造安全衛生設施標準</td><td>修正</td><td class="n">115.7.1</td><td class="hi">§11-2 → 116.7.1</td></tr>
         <tr><td>工程安全設計及整體工程統合管理辦法</td><td class="hi">訂定</td><td class="n">115.7.1</td><td class="hi">§5–§8、§10–§14、§18、§19 → 分兩階段 116.7.1 及 117.7.1</td></tr>
         <tr><td>機械設備器具監督管理辦法</td><td>修正</td><td class="n">115.7.1</td><td>—</td></tr>
-        <tr><td>職業安全衛生設施規則</td><td>修正</td><td class="n">115.7.1</td><td class="hi">§21-3、§57、§185-1～§185-4 → 116.1.1</td></tr>
+        <tr><td>職業安全衛生設施規則</td><td>修正</td><td class="n">115.7.1</td><td class="hi">§21-3、§57、§116（堆高機不得搭載人員）、§185-1～§185-4 → 116.1.1</td></tr>
         <tr><td>職場霸凌防治措施準則</td><td class="hi">訂定</td><td class="n">115.7.1</td><td>—</td></tr>
         <tr><td>地方主管機關受理最高負責人職場霸凌事件申訴處理辦法</td><td class="hi">訂定</td><td class="n">115.7.1</td><td>—</td></tr>
         <tr><td>勞工健康保護規則</td><td>修正</td><td class="n">115.7.1</td><td class="hi">§5、§13Ⅲ → 116.7.1；§2 附表1、§16 附表10、§17、§18、§20、§21 → 117.1.1</td></tr>
@@ -739,13 +757,91 @@ svg .taga{fill:#D9930C;rx:2}
     </div>
   </div>
 
+  <h3>115/7 之後的新動態（115/11/7 校閱補充）</h3>
+  <p class="sub" style="color:var(--ink-2);font-size:13px;margin-top:-4px">這一批是子法修正條文全文與 7 月以後的函頒指引、檢查注意事項。和上面不同，這裡是逐條對過修正總說明才寫進來的。</p>
+  <div class="traps">
+    <div class="trap" style="border-top-color:var(--red)">
+      <h4>施行細則大搬家（115.6.26 修正）</h4>
+      <ul>
+        <li><b>§5</b>勞動場所／工作場所／作業場所定義已刪除，改寫進職安法 §2 母法</li>
+        <li><b>§31</b>職業安全衛生管理計畫內容已刪除，移列管理辦法 §12-1，由 16 項改為 15 項</li>
+        <li><b>§28·§30</b>特別危害健康作業範圍、健檢紀錄保存改由勞工健康保護規則規定</li>
+        <li><b>§36-1</b>新增：出租或出借工作場所、設備者之事前危害告知內容與方式</li>
+        <li><b>§41</b>工作守則須納入機械設備器具之操作標準，以及防護具之提供、維護與使用</li>
+        <li><b>§46-1</b>事故後應變：人員清點、現場管制、提供救災人員防護具及疏散機制</li>
+        <li><b>30人</b>職災內容及統計須按月報備之門檻，由 50 人下修（§51）</li>
+      </ul>
+      <p style="font-size:12.5px;color:var(--ink-2);margin:8px 0 0">口訣：<b>五・二八・三十・三一・三四，五條搬家；三六之一新來報到</b>。</p>
+    </div>
+    <div class="trap" style="border-top-color:var(--blue)">
+      <h4>管理辦法（115.6.29 修正）</h4>
+      <ul>
+        <li><b>15項</b>管理計畫內容移入 §12-1；原「危害辨識」改為訂計畫前先做風險評估</li>
+        <li><b>未滿30</b>得以執行紀錄代替管理計畫的門檻，由「30 人以下」改為「未滿 30 人」</li>
+        <li><b>5人</b>第二、三類事業 5 人以下，業務主管得由受丁種訓練合格之雇主或代理人擔任（附表二附註 3）</li>
+        <li><b>§12-4</b>新增採購管理程序；營繕工程規劃設計階段要做風險評估並訂施工管理規範</li>
+        <li><b>§12-5</b>承攬管理計畫增列事故通報與進場管制；交付 2 個以上施工者時指定其一統合管理</li>
+        <li><b>§12-6</b>緊急應變計畫須先評估潛在風險，並定期教育訓練與演練</li>
+        <li><b>登錄</b>管理單位、人員及委員會名冊之設置或變更須依公告方式登錄並報檢查機構備查（§86、§87）</li>
+      </ul>
+    </div>
+    <div class="trap" style="border-top-color:var(--amber)">
+      <h4>設施規則（115.6.30 修正）</h4>
+      <ul>
+        <li><b>§21-3</b>墜落、倒塌、崩塌、火災、爆炸等高風險作業前：風險評估＋預防措施＋紀錄 3 年＋作業前通報檢查機構（116.1.1）</li>
+        <li><b>§116</b>刪除堆高機貨叉搭載人員的但書；高處作業改用高空工作車（116.1.1）</li>
+        <li><b>§185-1~4</b>四氫化矽、硝酸銨、有機過氧化物、熱媒油（操作溫度達閃火點以上）須作風險評估報告（116.1.1）</li>
+        <li><b>§179-1</b>灌注、卸收危險物前，確認物質種類、性質、相容性與輸送對象</li>
+        <li><b>§295</b>二氧化碳或惰性氣體滅火藥劑噴發洩漏致缺氧之虞者，依缺氧症預防規則辦理</li>
+        <li><b>§299-1</b>新增：冷藏室、冷凍室、地窖等，出入口門或蓋應有不致閉鎖之措施</li>
+        <li><b>§324-3</b>不法侵害預防：新增申訴管道公開揭示、調查處理程序、提供法律醫療心理協助</li>
+        <li><b>§325-1</b>外送作業（無僱傭關係）：依指引採危害預防，告知安全帽、反光標示，合理分派工作</li>
+      </ul>
+      <p style="font-size:12.5px;color:var(--ink-2);margin:8px 0 0">口訣：<b>評 21-3、堆 116、矽銨過熱 185——這四組都等到 116.1.1</b>；冷凍庫要能從裡面開（§299-1）。</p>
+    </div>
+    <div class="trap" style="border-top-color:var(--red)">
+      <h4>罰則細節（職安法 §40–§46 現行條文）</h4>
+      <ul>
+        <li><b>5年</b>違反 §6Ⅰ／§16Ⅰ致死亡：5 年以下徒刑、拘役或科或併科 150 萬以下罰金（§40）</li>
+        <li><b>3年</b>致罹災 3 人以上、違反停工通知、故意破壞災害現場等：3 年以下＋100 萬以下罰金（§41）</li>
+        <li><b>30–100萬</b>通報之監測資料經查核虛偽不實（§42）</li>
+        <li><b>450萬</b>§43、§45 罰鍰得依規模、性質或情節加重至法定最高額二分之一：300 萬＋150 萬</li>
+        <li><b>1–20萬</b>特定機械操作人員違反 §24Ⅲ致重大職災，並須接受指定講習；依雇主指示作業者不罰（§46）</li>
+      </ul>
+      <p style="font-size:12.5px;color:var(--ink-2);margin:8px 0 0">口訣：<b>死五百五、三傷三一百；三百再加半，封頂四百五</b>。</p>
+    </div>
+    <div class="trap" style="border-top-color:var(--green)">
+      <h4>職安署函頒指引與注意事項（115/9–10）</h4>
+      <ul>
+        <li><b>9/21</b>函頒「風險評估指引」，配合新法「工作前先做風險評估」</li>
+        <li><b>10/27</b>「緊急應變措施技術指引」改名「緊急應變措施指引」；計畫書 7 項內容，經最高主管核准後實施</li>
+        <li><b>2條</b>緊急應變指引：避難疏散路線至少 2 條，事先規劃、定期檢查、保持通暢</li>
+        <li><b>10/30</b>修正「加強職安法 §26 至 §27-1 檢查注意事項」：不得只用危害告知單代替風險評估</li>
+        <li><b>主施工者</b>平行承攬交錯作業時，業主須以書面或電子文件指定主施工者，統合介面協調、聯合巡視與應變演練</li>
+      </ul>
+      <p style="font-size:12.5px;color:var(--ink-2);margin:8px 0 0">緊急應變計畫 7 項口訣：<b>組・通・處・疏・設・外・演</b>（應變組織權責、通報程序、各類狀況處理、避難疏散、應變設備、外部救援聯繫、演練計畫與紀錄）。</p>
+    </div>
+    <div class="trap" style="border-top-color:var(--blue)">
+      <h4>116 年度勞動檢查方針（115/8/11 公布）</h4>
+      <ul>
+        <li><b>三主軸</b>源頭防災、承攬管理、職場霸凌防治</li>
+        <li><b>116.7.1</b>起查核營造工地進場勞工是否完成營造作業安全訓練（臺灣職安卡）</li>
+        <li><b>特定機械</b>新增查核挖土機、堆高機、高空工作車等操作人員是否完成合格訓練</li>
+        <li><b>90日</b>作業環境監測完成後 90 日內提出暴露評估報告，列為檢查重點</li>
+        <li><b>3年</b>前 3 年內曾發生重大職災或甲級規模火災爆炸者，納入高風險廠場重點監督</li>
+        <li><b>T-OiRA</b>鼓勵中小企業使用線上互動式風險評估工具</li>
+      </ul>
+    </div>
+  </div>
+
   <div class="mn" style="background:#7A1F1A">
     <div class="k">校閱範圍與限制　請務必自行確認</div>
-    <div class="v" style="font-size:16px;letter-spacing:.02em">我核對的是「法源有沒有動」，不是逐條核對 304 個數字</div>
+    <div class="v" style="font-size:16px;letter-spacing:.02em">115/11/7 第二輪：逐條對修正總說明，已改 4 處</div>
     <div class="d">
-      已向勞動部與職安署官網查證：修法公布日、施行日、11 部子法清單與緩衝表、兩部新準則、新罰則額度——這些可信。<br><br>
-      <b>沒有做到的：</b>逐條比對修正後全文。全國法規資料庫擋自動存取，我無法把每一條現行條文抓下來一一核對。因此本檔的具體數字仍以你那份講義為底本。<br><br>
-      <b>你要自己確認的一件事：</b>技能檢定的<b>法規命題基準日</b>。學科題庫是定期修訂的，新法上路未必立刻入題。請查你這梯次的<b>報名簡章</b>或技能檢定中心公告，確認命題依據截止日；若基準日在 115.7.1 之前，Section 00 這些新制看看就好，不會考。
+      <b>這輪更正：</b>① 呼吸防護計畫條號 §278 → <b>§277-1</b>（數字牆、分章、題庫三處）② 管理計畫由「施行細則 §31・16 項」改為 <b>管理辦法 §12-1・15 項</b> ③ 以紀錄代替管理計畫的門檻改為「<b>未滿 30 人</b>」④ 設施規則緩衝條文補上 §116。<br><br>
+      <b>已對過、沒問題的：</b>職安法 §22-1～§22-3 霸凌人數門檻與時效、§40–§46 罰則金額、健保規則特危作業 50 人門檻、丁種業務主管（5 人以下）、管理辦法附表二人員配置。<br><br>
+      <b>仍然沒做到的：</b>304 個數字未全部逐條比對全文（全國法規資料庫擋自動存取）。<br><br>
+      <b>作答原則：</b>官方學科題庫 22200A15 是 115/3/17 公告版，答案鍵仍照舊法。<b>學科照題庫鍵作答，術科申論再用新法</b>；兩者衝突時，答案寫舊、補充寫新。
     </div>
   </div>
 </section>
@@ -788,11 +884,11 @@ svg .taga{fill:#D9930C;rx:2}
   <div class="grid">
     <div class="dim" data-c="blu" data-f="ppl"><div class="rule-line"><i></i></div><div class="val">10<small>人</small></div><div class="lab">應訂定職場霸凌申訴管道並公開揭示</div><div class="src">職安法 §22-1</div></div>
     <div class="dim" data-c="blu" data-f="ppl"><div class="rule-line"><i></i></div><div class="val">30<small>人</small></div><div class="lab">應訂定職場霸凌防治措施、申訴及懲處規範</div><div class="src">職安法 §22-1</div></div>
-    <div class="dim" data-c="blu" data-f="ppl"><div class="rule-line"><i></i></div><div class="val">30<small>人以下</small></div><div class="lab">得以執行紀錄或文件代替職安衛管理計畫</div><div class="src">管理辦法 §12-1</div></div>
+    <div class="dim" data-c="blu" data-f="ppl"><div class="rule-line"><i></i></div><div class="val">30<small>人未滿</small></div><div class="lab">得以執行紀錄或文件代替職安衛管理計畫（115.7.1 起由「30 人以下」改為「未滿 30 人」，剛好 30 人就要訂計畫）</div><div class="src">管理辦法 §12-1</div></div>
     <div class="dim" data-c="blu" data-f="ppl"><div class="rule-line"><i></i></div><div class="val">50<small>人</small></div><div class="lab">應置勞工健康服務人員或委託專業機構</div><div class="src">職安法 §22</div></div>
     <div class="dim" data-c="blu" data-f="ppl"><div class="rule-line"><i></i></div><div class="val">100<small>人</small></div><div class="lab">第一類事業設專責一級管理單位／管理人員專職／訂管理規章</div><div class="src">管理辦法 §2-1・§3・§12-1</div></div>
     <div class="dim" data-c="blu" data-f="ppl"><div class="rule-line"><i></i></div><div class="val">100<small>人</small></div><div class="lab">聽力保護計畫／人因性危害預防計畫／不法侵害預防計畫</div><div class="src">設施規則 §300-1・§324-1・§324-3</div></div>
-    <div class="dim" data-c="blu" data-f="ppl"><div class="rule-line"><i></i></div><div class="val">200<small>人</small></div><div class="lab">應訂定呼吸防護計畫／第一類事業建置職安衛管理系統</div><div class="src">設施規則 §278・管理辦法 §12-2</div></div>
+    <div class="dim" data-c="blu" data-f="ppl"><div class="rule-line"><i></i></div><div class="val">200<small>人</small></div><div class="lab">應訂定呼吸防護計畫／第一類事業建置職安衛管理系統</div><div class="src">設施規則 §277-1・管理辦法 §12-2</div></div>
     <div class="dim" data-c="blu" data-f="ppl"><div class="rule-line"><i></i></div><div class="val">300<small>人</small></div><div class="lab">第二類事業設一級管理單位／應配置醫護人員辦理健康服務</div><div class="src">管理辦法 §2-1・健保規則 §3</div></div>
     <div class="dim" data-c="blu" data-f="ppl"><div class="rule-line"><i></i></div><div class="val">500<small>人</small></div><div class="lab">總機構第一・二類設一級管理單位／第二類建置管理系統</div><div class="src">管理辦法 §6・§12-2</div></div>
     <div class="dim" data-c="blu" data-f="ppl"><div class="rule-line"><i></i></div><div class="val">3000<small>人</small></div><div class="lab">第三類事業總機構應設管理單位</div><div class="src">管理辦法 §6</div></div>
@@ -1918,9 +2014,9 @@ svg .taga{fill:#D9930C;rx:2}
   </div>
 
   <div class="mn">
-    <div class="k">施行細則 §31　職業安全衛生管理計畫（16 項）</div>
-    <div class="v">危害辨識・機械管理・危害通識・環境監測・危險場所・採購管理・作業標準・檢查檢點・安衛訓練・防具管理・健康管理・安衛資訊・緊急應變・職災調查・績效評估・其它措施</div>
-    <div class="d">四字一組，共 16 組。注意「職災調查」含<b>虛驚事故與影響身心健康事件</b>之調查處理及統計分析。</div>
+    <div class="k">管理辦法 §12-1　職業安全衛生管理計畫（115.7.1 起 15 項）</div>
+    <div class="v">先評估，再寫十五：機化測評・採承變・標檢訓具健・資應調績其</div>
+    <div class="d">機械設備器具管理・危害性化學品分類標示通識・有害作業環境採樣策略及監測・危險性工作場所製程或施工安全評估・<b>採購、承攬及變更管理</b>・安全衛生作業標準・定期檢查重點檢查作業檢點及巡視・教育訓練・個人防護具管理・健康檢查管理及促進・安衛資訊蒐集分享運用・緊急應變・職災虛驚及影響身心健康事件（含<b>不法侵害、職場霸凌</b>）之調查統計・稽核及績效評估・其他。<br><b>變動</b>：原施行細則 §31（16 項）已刪除並移列本條；原第一項「危害辨識及風險評估」改為訂計畫<b>之前</b>的前置程序，所以少一項。舊題庫答「16 項／細則 §31」時照鍵作答即可。</div>
   </div>
 
   <div class="mn">
@@ -1950,10 +2046,172 @@ svg .taga{fill:#D9930C;rx:2}
   <div class="mn">
     <div class="k">安全衛生工作守則　九項內容（細則 §41）</div>
     <div class="v">管理權責・機械維護檢查・工作安全衛生標準・教育訓練・健康指導管理・急救搶救・防護設備・事故通報報告・其他</div>
-    <div class="d">會同勞工代表訂定 → <b>報經勞動檢查機構備查</b> → 公告實施。</div>
+    <div class="d">會同勞工代表訂定 → <b>報經勞動檢查機構備查</b> → 公告實施。115.7.1 起細則 §41 另要求寫入<b>機械設備器具操作標準</b>與<b>防護具之提供、維護及使用</b>。</div>
+  </div>
+
+  <h3>新增口訣（115/11 補）</h3>
+
+  <div class="mn">
+    <div class="k">容許濃度三道限值　勞工作業場所容許暴露標準</div>
+    <div class="v">八小時看平均，十五分看短時，任何時刻看天花板</div>
+    <div class="d">PEL-TWA：8 小時日時量平均容許濃度。PEL-STEL：任何一次連續 <b>15 分鐘</b>的時量平均。PEL-C（最高容許濃度，附表註「高」字）：<b>任何時間</b>都不得超過。三道都要過才算合格。</div>
+  </div>
+
+  <div class="mn">
+    <div class="k">變量係數　勞工作業場所容許暴露標準</div>
+    <div class="v">三・二・一五・一二五・一，濃度越高係數越小</div>
+    <div class="d">容許濃度 0–未滿 1 → <b>3</b>；1–未滿 10 → <b>2</b>；10–未滿 100 → <b>1.5</b>；100–未滿 1000 → <b>1.25</b>；1000 以上 → <b>1</b>。STEL ＝ TWA × 變量係數。</div>
+  </div>
+
+  <div class="mn">
+    <div class="k">噪音 5 分貝交換率　設施規則 §300</div>
+    <div class="v">九十配八小時，每加五分貝，時間砍一半</div>
+    <div class="d">90 dB 8 小時 → 95 dB 4 小時 → 100 dB 2 小時 → 105 dB 1 小時 → 110 dB 30 分 → <b>115 dB 15 分</b>。劑量 D＝Σ(實際時間÷容許時間)，超過 1（100%）即違規；8 小時 TWA ＝ 16.61 log(D) ＋ 90（D 以小數計）。</div>
+  </div>
+
+  <div class="mn">
+    <div class="k">危害控制優先順序　CNS 45001 8.1.2</div>
+    <div class="v">除・代・工・管・個</div>
+    <div class="d">消除危害 → 以較低危害取代 → 工程控制 → 管理控制（含訓練、標示、輪班）→ 個人防護具。越前面越有效；防護具永遠是最後一道。營造標準 §17 墜落防護順序也是同一個邏輯：先讓人在地面完成，最後才用安全帶。</div>
+  </div>
+
+  <div class="mn">
+    <div class="k">CNS 45001 章節與 PDCA</div>
+    <div class="v">四前五領，六 P、七八 D、九 C、十 A</div>
+    <div class="d">第 4 章組織前後環境、第 5 章領導與工作者參與（位於循環中心）；第 6 章規劃＝P；第 7 章支援、第 8 章運作＝D；第 9 章績效評估＝C；第 10 章改善＝A。</div>
+  </div>
+
+  <div class="mn">
+    <div class="k">呼吸防護六步驟　設施規則 §277-1</div>
+    <div class="v">辨・選・用・維・訓・評；二百人寫成計畫</div>
+    <div class="d">危害辨識及暴露評估 → 防護具選擇 → 使用 → 維護管理 → 教育訓練 → 成效評估及改善；紀錄保存 3 年。勞工 <b>200 人以上</b>訂呼吸防護計畫，未滿得以執行紀錄代替。</div>
+  </div>
+
+  <div class="mn">
+    <div class="k">職場霸凌數字　職安法 §22-1～§22-3</div>
+    <div class="v">十人申訴、三十規範；外聘過半；三年一年</div>
+    <div class="d">10 人以上訂申訴管道並公開揭示；30 人以上訂防治措施、申訴及懲處規範；調查小組外聘成員 ≥ <b>1/2</b>；行為終了逾 <b>3 年</b>不受理、在職時發生者離職後 <b>1 年</b>內可申訴。最高負責人被申訴 → 逕向地方主管機關，最高負責人霸凌罰 1–100 萬。</div>
+  </div>
+
+  <div class="mn">
+    <div class="k">刑責與罰鍰階梯　職安法 §40–§46</div>
+    <div class="v">死五百五、三傷三一百；三百再加半，封頂四百五</div>
+    <div class="d">致死：5 年以下＋150 萬以下罰金；罹災 3 人以上：3 年以下＋100 萬以下；行政罰鍰最高 300 萬，得加重至最高額二分之一 → 450 萬；監測資料造假 30–100 萬。</div>
+  </div>
+
+  <div class="mn">
+    <div class="k">失能傷害統計進位</div>
+    <div class="v">FR、FSI 留兩位，SR 只留整數，一律捨去</div>
+    <div class="d">FR ＝ 失能傷害次數 × 10⁶ ÷ 總經歷工時；SR ＝ 失能傷害總損失日數 × 10⁶ ÷ 總經歷工時；FSI ＝ √(FR × SR ÷ 1000)。死亡與永久全失能各計 <b>6000 日</b>。</div>
+  </div>
+
+  <div class="mn">
+    <div class="k">爆炸界限兩個公式</div>
+    <div class="v">上減下、除以下＝危險指數；混合氣體看勒沙特列</div>
+    <div class="d">H ＝ (UEL − LEL) ÷ LEL，數字越大越危險。混合氣體 LEL ＝ 100 ÷ Σ(各成分體積% ÷ 各成分 LEL)。現場測到 ≥ <b>30% LEL</b> 即屬立即發生危險之虞，要撤人。</div>
+  </div>
+
+  <div class="mn">
+    <div class="k">ppm ↔ mg/m³（25℃、1 atm）</div>
+    <div class="v">毫克等於 ppm 乘分子量，除以二四點四五</div>
+    <div class="d">mg/m³ ＝ ppm × M ÷ 24.45；ppm ＝ mg/m³ × 24.45 ÷ M。24.45 是 25℃、1 大氣壓下 1 莫耳氣體的公升數。</div>
+  </div>
+
+  <div class="mn">
+    <div class="k">自動檢查三種　管理辦法</div>
+    <div class="v">定期照週期、重點看初次與修過、檢點在作業前</div>
+    <div class="d">定期檢查：依每年、每月、每週等週期；重點檢查：初次使用、拆卸、改裝或修理後；作業檢點：每日作業前或作業中由作業者實施。</div>
   </div>
 </section>
 
+
+<!-- ============ 5B. 名詞解說 ============ -->
+<section id="gloss">
+  <h2>Section 05B</h2>
+  <div class="h2sub">名詞解說</div>
+  <p class="sub" style="color:var(--ink-2);font-size:13.5px">英文縮寫、計算題裡的代號、法條裡的專有名詞，一次講清楚。每張卡片最下面一行是<b>背誦口訣</b>。共 55 個名詞。</p>
+  <div class="gl-bar">
+    <input id="glq" type="search" placeholder="找名詞：STEL / 爆炸下限 / FSI / 主施工者…" autocomplete="off">
+    <div class="gl-chips"><button type="button" class="gl-c on" data-g="all">全部</button><button type="button" class="gl-c" data-g="0">濃度與暴露</button><button type="button" class="gl-c" data-g="1">火災爆炸</button><button type="button" class="gl-c" data-g="2">物理性危害</button><button type="button" class="gl-c" data-g="3">災害統計</button><button type="button" class="gl-c" data-g="4">風險評估與管理</button><button type="button" class="gl-c" data-g="5">法定用語</button><button type="button" class="gl-c" data-g="6">化學品標示</button></div>
+  </div>
+  <p id="gl-none" class="sub" style="display:none;color:var(--ink-2)">沒有符合的名詞。</p>
+  <h3 class="gl-h" data-g="0">濃度與暴露</h3>
+  <div class="gl-grid" data-g="0">
+    <div class="gl" data-g="0"><div class="gl-t">容許濃度<span class="gl-ab">PEL｜Permissible Exposure Limit</span></div><div class="gl-d">勞工每天暴露於該濃度下，絕大多數人不致產生不良反應的上限值。我國分成 TWA、STEL、C 三種。</div><div class="gl-s">勞工作業場所容許暴露標準（附表一、附表二）</div><div class="gl-m">容許濃度三兄弟：平均、短時、天花板</div></div>
+    <div class="gl" data-g="0"><div class="gl-t">八小時日時量平均容許濃度<span class="gl-ab">PEL-TWA｜Time-Weighted Average</span></div><div class="gl-d">把一個工作日各時段濃度乘以時間加總，再除以總時間，所得平均值不得超過的上限。</div><div class="gl-s">TWA ＝ Σ(Cᵢ·tᵢ) ÷ Σtᵢ；計算以 8 小時為基準</div><div class="gl-m">濃度乘時間，加總再平均</div></div>
+    <div class="gl" data-g="0"><div class="gl-t">短時間時量平均容許濃度<span class="gl-ab">PEL-STEL｜Short-Term Exposure Limit</span></div><div class="gl-d">任何一次連續 15 分鐘的時量平均濃度上限，防止短時間高濃度造成急性危害。</div><div class="gl-s">STEL ＝ TWA × 變量係數（3／2／1.5／1.25／1）</div><div class="gl-m">十五分鐘一格，不准衝太高</div></div>
+    <div class="gl" data-g="0"><div class="gl-t">最高容許濃度<span class="gl-ab">PEL-C｜Ceiling</span></div><div class="gl-d">任何時間、任何瞬間都不得超過的濃度，多用於刺激性強或急毒性高的物質。</div><div class="gl-s">附表一符號欄註有「高」字者</div><div class="gl-m">天花板，碰一下就算違規</div></div>
+    <div class="gl" data-g="0"><div class="gl-t">變量係數</div><div class="gl-d">把 TWA 換算成 STEL 用的倍數；容許濃度越高，係數越小。</div><div class="gl-s">0–&lt;1：3｜1–&lt;10：2｜10–&lt;100：1.5｜100–&lt;1000：1.25｜≥1000：1</div><div class="gl-m">三・二・一五・一二五・一</div></div>
+    <div class="gl" data-g="0"><div class="gl-t">相加效應<span class="gl-ab">Additive effect</span></div><div class="gl-d">兩種以上有害物作用於同一器官時，各自的暴露比值相加；總和大於 1 即超過容許濃度。</div><div class="gl-s">Σ(TWAᵢ ÷ PELᵢ) ＞ 1 即不合格</div><div class="gl-m">各自及格，加起來可能不及格</div></div>
+    <div class="gl" data-g="0"><div class="gl-t">ppm<span class="gl-ab">parts per million</span></div><div class="gl-d">百萬分之一。在 25℃、1 大氣壓下，每立方公尺空氣中含有害物的立方公分數。</div><div class="gl-s">mg/m³ ＝ ppm × M ÷ 24.45</div><div class="gl-m">24.45 是換算的鑰匙</div></div>
+    <div class="gl" data-g="0"><div class="gl-t">mg/m³ 與 f/cc</div><div class="gl-d">mg/m³：每立方公尺空氣中有害物的毫克數，用於粉塵、燻煙等；f/cc：每立方公分空氣中的纖維根數，用於石綿等纖維。</div><div class="gl-s">勞工作業場所容許暴露標準</div><div class="gl-m">氣體看 ppm，粉塵看毫克，纖維數根數</div></div>
+    <div class="gl" data-g="0"><div class="gl-t">生物偵測<span class="gl-ab">BEI｜Biological Exposure Index</span></div><div class="gl-d">驗血或驗尿看體內代謝物，判斷實際吸收了多少，比空氣監測更貼近真實暴露。</div><div class="gl-s">例：正己烷驗尿中 2,5-己二酮；鉛驗血中鉛</div><div class="gl-m">空氣看環境，尿血看身體</div></div>
+    <div class="gl" data-g="0"><div class="gl-t">立即致危濃度<span class="gl-ab">IDLH｜Immediately Dangerous to Life or Health</span></div><div class="gl-d">暴露 30 分鐘內可能致死或造成不可逆傷害、甚至無法自行逃生的濃度。屬美國 NIOSH 概念，用來選擇呼吸防護具。</div><div class="gl-s">我國法規未直接引用；選防護具時常見</div><div class="gl-m">超過 IDLH 只能用供氣式</div></div>
+    <div class="gl" data-g="0"><div class="gl-t">作業環境監測</div><div class="gl-d">依計畫對作業環境採樣、測定並分析，掌握勞工暴露狀況。分化學性（有機溶劑、特化、粉塵、鉛）與物理性（噪音、WBGT）。</div><div class="gl-s">監測辦法；實施前 15 日通報計畫；會同職安衛人員及勞工代表</div><div class="gl-m">WBGT 三個月，鉛類一年，其餘半年</div></div>
+    <div class="gl" data-g="0"><div class="gl-t">化學品分級管理<span class="gl-ab">CCB｜Chemical Control Banding</span></div><div class="gl-d">對沒有容許濃度的化學品，依健康危害分類、散布狀況與使用量，分級並對應控制方法。</div><div class="gl-s">危害性化學品評估及分級管理辦法</div><div class="gl-m">沒標準就分級，分級就有對策</div></div>
+  </div>
+  <h3 class="gl-h" data-g="1">火災爆炸</h3>
+  <div class="gl-grid" data-g="1">
+    <div class="gl" data-g="1"><div class="gl-t">爆炸下限<span class="gl-ab">LEL｜Lower Explosive Limit</span></div><div class="gl-d">可燃性氣體或蒸氣在空氣中能被點燃爆炸的最低濃度；低於此濃度「太稀」燒不起來。</div><div class="gl-s">≥ 30% LEL 屬有立即發生危險之虞（施行細則 §25）</div><div class="gl-m">太稀不爆，三成就撤</div></div>
+    <div class="gl" data-g="1"><div class="gl-t">爆炸上限<span class="gl-ab">UEL｜Upper Explosive Limit</span></div><div class="gl-d">能被點燃爆炸的最高濃度；高於此濃度「太濃」缺氧燒不起來，但一稀釋就會進入爆炸範圍。</div><div class="gl-s">例：甲烷約 5%～15%</div><div class="gl-m">太濃不爆，一稀就爆</div></div>
+    <div class="gl" data-g="1"><div class="gl-t">爆炸範圍與危險指數<span class="gl-ab">H｜Hazard index</span></div><div class="gl-d">LEL 到 UEL 之間就是爆炸範圍。範圍越寬、下限越低越危險。</div><div class="gl-s">H ＝ (UEL − LEL) ÷ LEL</div><div class="gl-m">上減下，除以下</div></div>
+    <div class="gl" data-g="1"><div class="gl-t">勒沙特列定律<span class="gl-ab">Le Chatelier</span></div><div class="gl-d">估算混合可燃氣體的爆炸下限。</div><div class="gl-s">LEL混 ＝ 100 ÷ Σ(體積%ᵢ ÷ LELᵢ)</div><div class="gl-m">一百除以各家比例</div></div>
+    <div class="gl" data-g="1"><div class="gl-t">閃火點<span class="gl-ab">Flash point</span></div><div class="gl-d">液體表面揮發的蒸氣，遇火源會「閃一下」的最低液溫。是易燃液體分級依據。</div><div class="gl-s">易燃液體：閃火點未滿 65℃，分 −30／0／30／65 四級</div><div class="gl-m">閃一下就熄＝閃火點</div></div>
+    <div class="gl" data-g="1"><div class="gl-t">燃點與自燃溫度<span class="gl-ab">Fire point｜AIT</span></div><div class="gl-d">燃點：點火後能持續燃燒的最低溫度，略高於閃火點。自燃溫度：不需火源，加熱到此溫度即自行起火。</div><div class="gl-s">題目常考三者高低：閃火點 ＜ 燃點 ＜ 自燃溫度</div><div class="gl-m">閃、燃、自燃，一個比一個熱</div></div>
+    <div class="gl" data-g="1"><div class="gl-t">粉塵爆炸五要素<span class="gl-ab">Dust explosion pentagon</span></div><div class="gl-d">可燃性粉塵、助燃物（氧）、火源，再加上粉塵懸浮擴散與侷限空間，五者同時存在才會爆。</div><div class="gl-s">比火災三要素多出「懸浮」與「侷限」</div><div class="gl-m">三角火，加兩邊變五角</div></div>
+    <div class="gl" data-g="1"><div class="gl-t">危險物</div><div class="gl-d">爆炸性物質、著火性物質、易燃液體、氧化性物質、可燃性氣體等五大類。</div><div class="gl-s">設施規則 §11 附表一</div><div class="gl-m">爆・著・易・氧・可</div></div>
+  </div>
+  <h3 class="gl-h" data-g="2">物理性危害</h3>
+  <div class="gl-grid" data-g="2">
+    <div class="gl" data-g="2"><div class="gl-t">時量平均音壓級<span class="gl-ab">L-TWA｜dBA</span></div><div class="gl-d">以 A 加權（模擬人耳）量測的噪音，換算成 8 小時平均值。我國交換率 5 分貝。</div><div class="gl-s">8 小時 85 dBA 起聽力保護；90 dBA 超過要工程改善</div><div class="gl-m">九十配八，加五減半</div></div>
+    <div class="gl" data-g="2"><div class="gl-t">噪音劑量<span class="gl-ab">D｜Dose</span></div><div class="gl-d">各段實際暴露時間除以該音量容許時間後相加。1（100%）是上限，0.5（50%）相當 85 dBA。</div><div class="gl-s">D ＝ Σ(tᵢ ÷ Tᵢ)；Tᵢ ＝ 8 ÷ 2^((L−90)/5)</div><div class="gl-m">實際除以容許，加起來別過一</div></div>
+    <div class="gl" data-g="2"><div class="gl-t">綜合溫度熱指數<span class="gl-ab">WBGT</span></div><div class="gl-d">綜合濕度、輻射熱與氣溫的熱危害指標。</div><div class="gl-s">戶外有日曬 0.7Tnwb＋0.2Tg＋0.1Ta；無日曬 0.7Tnwb＋0.3Tg</div><div class="gl-m">濕七黑二乾一，室內黑三</div></div>
+    <div class="gl" data-g="2"><div class="gl-t">米燭光<span class="gl-ab">lux</span></div><div class="gl-d">照度單位，每平方公尺接收 1 流明的光通量。</div><div class="gl-s">一般辦公 300、精密 500–1000、極精密 1000 以上</div><div class="gl-m">辦公三百，精密上千</div></div>
+    <div class="gl" data-g="2"><div class="gl-t">缺氧</div><div class="gl-d">空氣中氧氣濃度未滿 18% 的狀態。</div><div class="gl-s">缺氧症預防規則 §3；換氣不得使用純氧</div><div class="gl-m">十八以下就是缺氧</div></div>
+    <div class="gl" data-g="2"><div class="gl-t">局限空間<span class="gl-ab">Confined space</span></div><div class="gl-d">非供勞工在其內部從事經常性作業、勞工進出方法受限制，且無法以自然通風維持充分清淨空氣的空間。</div><div class="gl-s">設施規則 §19-1；進入許可、進出紀錄保存 3 年</div><div class="gl-m">不常待、難進出、不通風</div></div>
+  </div>
+  <h3 class="gl-h" data-g="3">災害統計</h3>
+  <div class="gl-grid" data-g="3">
+    <div class="gl" data-g="3"><div class="gl-t">失能傷害<span class="gl-ab">Disabling injury</span></div><div class="gl-d">造成死亡、永久全失能、永久部分失能或暫時全失能的職業傷害。</div><div class="gl-s">死亡、永久全失能各計 6000 日損失</div><div class="gl-m">死、全、部分、暫時，四種</div></div>
+    <div class="gl" data-g="3"><div class="gl-t">失能傷害頻率<span class="gl-ab">FR｜Frequency Rate</span></div><div class="gl-d">每百萬工時發生幾次失能傷害。</div><div class="gl-s">FR ＝ 次數 × 10⁶ ÷ 總經歷工時；小數兩位以下捨去</div><div class="gl-m">FR 算次數</div></div>
+    <div class="gl" data-g="3"><div class="gl-t">失能傷害嚴重率<span class="gl-ab">SR｜Severity Rate</span></div><div class="gl-d">每百萬工時損失多少日。</div><div class="gl-s">SR ＝ 損失日數 × 10⁶ ÷ 總經歷工時；取整數，以下捨去</div><div class="gl-m">SR 算天數，只留整數</div></div>
+    <div class="gl" data-g="3"><div class="gl-t">綜合傷害指數<span class="gl-ab">FSI｜Frequency-Severity Indicator</span></div><div class="gl-d">把頻率與嚴重率合成一個指標，方便比較。</div><div class="gl-s">FSI ＝ √(FR × SR ÷ 1000)；小數兩位以下捨去</div><div class="gl-m">FR 乘 SR，除千再開根</div></div>
+  </div>
+  <h3 class="gl-h" data-g="4">風險評估與管理</h3>
+  <div class="gl-grid" data-g="4">
+    <div class="gl" data-g="4"><div class="gl-t">風險<span class="gl-ab">Risk</span></div><div class="gl-d">危害事件發生的可能性與後果嚴重度的組合。</div><div class="gl-s">風險 ＝ 嚴重度 × 可能性</div><div class="gl-m">嚴重乘機率</div></div>
+    <div class="gl" data-g="4"><div class="gl-t">危害辨識<span class="gl-ab">Hazard identification</span></div><div class="gl-d">找出可能造成傷害的來源、情境或行為，是風險評估的第一步。</div><div class="gl-s">115.7.1 起改為訂管理計畫前的前置程序</div><div class="gl-m">先找危害，才評風險</div></div>
+    <div class="gl" data-g="4"><div class="gl-t">控制層級<span class="gl-ab">Hierarchy of controls</span></div><div class="gl-d">降低風險的措施依效果排序：消除、取代、工程控制、管理控制、個人防護具。</div><div class="gl-s">CNS 45001 8.1.2</div><div class="gl-m">除・代・工・管・個</div></div>
+    <div class="gl" data-g="4"><div class="gl-t">危害及可操作性分析<span class="gl-ab">HazOp</span></div><div class="gl-d">以引導字（無、多、少、相反、部分…）逐一偏離設計意圖，找出製程可能的危害與操作問題。</div><div class="gl-s">製程安全評估定期實施辦法 §5 六種方法之一</div><div class="gl-m">引導字一個一個問</div></div>
+    <div class="gl" data-g="4"><div class="gl-t">失誤模式及影響分析<span class="gl-ab">FMEA</span></div><div class="gl-d">逐一列出每個元件可能的失效模式，評估其對系統的影響。屬由下而上。</div><div class="gl-s">製程安全評估方法</div><div class="gl-m">從零件往上推</div></div>
+    <div class="gl" data-g="4"><div class="gl-t">故障樹分析<span class="gl-ab">FTA</span></div><div class="gl-d">以不希望發生的頂端事件為起點，用及閘（AND）、或閘（OR）往下推出基本原因。屬由上而下、可量化。</div><div class="gl-s">製程安全評估方法</div><div class="gl-m">從事故往下挖</div></div>
+    <div class="gl" data-g="4"><div class="gl-t">變更管理<span class="gl-ab">MOC｜Management of Change</span></div><div class="gl-d">製程、設備、物料、人員或作業程序變更前，先辨識危害、評估風險並採預防措施。</div><div class="gl-s">管理辦法 §12-3</div><div class="gl-m">要改先評估</div></div>
+    <div class="gl" data-g="4"><div class="gl-t">上鎖掛牌<span class="gl-ab">LOTO｜Lockout/Tagout</span></div><div class="gl-d">維修、掃除、上油前停止機械並隔離能源，以鎖具或標示防止他人誤啟動。</div><div class="gl-s">設施規則 §57（修正版 116.1.1 施行，新增危害防止計畫）</div><div class="gl-m">停機、斷源、上鎖、掛牌</div></div>
+    <div class="gl" data-g="4"><div class="gl-t">職安衛管理系統<span class="gl-ab">CNS 45001</span></div><div class="gl-d">以 PDCA 持續改善的管理架構。115.7.1 起管理辦法用語改為「管理制度」。</div><div class="gl-s">第一類 ≥200 人、第二類 ≥500 人等應建置（管理辦法 §12-2）</div><div class="gl-m">六 P、七八 D、九 C、十 A</div></div>
+    <div class="gl" data-g="4"><div class="gl-t">自動檢查</div><div class="gl-d">事業單位自己做的檢查，分定期檢查、重點檢查、作業檢點三種。</div><div class="gl-s">管理辦法 §13 以下</div><div class="gl-m">定期照週期，重點看修過，檢點在作業前</div></div>
+  </div>
+  <h3 class="gl-h" data-g="5">法定用語</h3>
+  <div class="gl-grid" data-g="5">
+    <div class="gl" data-g="5"><div class="gl-t">工作者</div><div class="gl-d">勞工、自營作業者，以及其他受工作場所負責人指揮或監督從事勞動的人員。</div><div class="gl-s">職安法 §2</div><div class="gl-m">勞工＋自營＋受指揮</div></div>
+    <div class="gl" data-g="5"><div class="gl-t">勞動場所・工作場所・作業場所</div><div class="gl-d">範圍由大到小：勞動場所 ⊃ 工作場所 ⊃ 作業場所。</div><div class="gl-s">115.7.1 起定義移入職安法 §2（原細則 §5 刪除）</div><div class="gl-m">勞・工・作，由大到小</div></div>
+    <div class="gl" data-g="5"><div class="gl-t">原事業單位</div><div class="gl-d">以其事業交付承攬，而與承攬人一起在同一期間、同一工作場所共同作業的事業單位。</div><div class="gl-s">職安法 §27；應設協議組織</div><div class="gl-m">發包又一起做的那一方</div></div>
+    <div class="gl" data-g="5"><div class="gl-t">主施工者</div><div class="gl-d">業主把工程交付兩個以上施工者（平行承攬）時，指定其中一家負責統合管理。</div><div class="gl-s">職安法 §27-1；書面或電子文件指定</div><div class="gl-m">平行多家，指定一家當班長</div></div>
+    <div class="gl" data-g="5"><div class="gl-t">有立即發生危險之虞</div><div class="gl-d">可能立刻造成傷亡的狀態，勞工得自行停止作業並退避，雇主不得因此處分。</div><div class="gl-s">職安法 §18；細則 §25 列九種情形</div><div class="gl-m">墜・電・塌・火・毒</div></div>
+    <div class="gl" data-g="5"><div class="gl-t">重大職業災害（應通報）</div><div class="gl-d">死亡；罹災 3 人以上；罹災 1 人以上且需住院。雇主應於 8 小時內通報檢查機構。</div><div class="gl-s">職安法 §37</div><div class="gl-m">死、三、一住院，八小時</div></div>
+    <div class="gl" data-g="5"><div class="gl-t">職場霸凌</div><div class="gl-d">利用職務或權勢，逾越業務上必要且合理範圍，持續以不當言詞行為使人身心受害；情節重大不以持續為必要。</div><div class="gl-s">職安法 §22-1</div><div class="gl-m">權勢、逾越、持續、受害</div></div>
+    <div class="gl" data-g="5"><div class="gl-t">執行職務遭受不法侵害</div><div class="gl-d">範圍比霸凌廣，含主管、同事、客戶或外部人員造成的身體或精神侵害。</div><div class="gl-s">設施規則 §324-3；100 人以上訂計畫</div><div class="gl-m">霸凌是不法侵害的一種</div></div>
+    <div class="gl" data-g="5"><div class="gl-t">特別危害健康作業</div><div class="gl-d">高溫、噪音、游離輻射、異常氣壓、鉛、四烷基鉛、粉塵、指定有機溶劑、指定特化物、黃磷、聯啶或巴拉刈等，需做特殊健檢的作業。</div><div class="gl-s">健保規則（原細則 §28 已刪除）</div><div class="gl-m">特危要特檢</div></div>
+    <div class="gl" data-g="5"><div class="gl-t">危險性機械・危險性設備</div><div class="gl-d">機械：起重機、人字臂、營建用升降機及提升機、吊籠；設備：鍋爐、壓力容器、高壓氣體特定設備及容器。須經檢查合格才能使用，操作人員須受訓或技能檢定合格。</div><div class="gl-s">職安法 §16、§24</div><div class="gl-m">機械會吊會升，設備會壓會燒</div></div>
+    <div class="gl" data-g="5"><div class="gl-t">特定機械</div><div class="gl-d">非屬危險性機械，但操作人員須受訓：推土機、挖掘機、鏟裝機、裝載機、堆高機、高空工作車、0.5～未滿 3 公噸之起重機等。</div><div class="gl-s">職安法 §24（115.7.1 新制）</div><div class="gl-m">挖推鏟裝堆高空，小吊車</div></div>
+    <div class="gl" data-g="5"><div class="gl-t">型式驗證<span class="gl-ab">TC</span></div><div class="gl-d">特定機械設備器具須經驗證機構驗證合格，張貼菱形 TC 標章才能產製、輸入。</div><div class="gl-s">職安法 §8；證書有效 3 年</div><div class="gl-m">TC 菱形、TD 圓形</div></div>
+  </div>
+  <h3 class="gl-h" data-g="6">化學品標示</h3>
+  <div class="gl-grid" data-g="6">
+    <div class="gl" data-g="6"><div class="gl-t">GHS<span class="gl-ab">Globally Harmonized System</span></div><div class="gl-d">全球化學品分類及標示調和制度，統一危害分類、標示圖式與安全資料表格式。</div><div class="gl-s">危害性化學品標示及通識規則</div><div class="gl-m">全球一張圖</div></div>
+    <div class="gl" data-g="6"><div class="gl-t">安全資料表<span class="gl-ab">SDS｜Safety Data Sheet</span></div><div class="gl-d">記載化學品危害、防護、急救、儲存等資訊的文件，共 16 大項。</div><div class="gl-s">至少每 3 年檢討一次，更新紀錄保存 3 年</div><div class="gl-m">十六項、三年審</div></div>
+    <div class="gl" data-g="6"><div class="gl-t">危害圖式<span class="gl-ab">Pictogram</span></div><div class="gl-d">紅色菱框、白底黑符號的九種圖示。</div><div class="gl-s">火焰、圓圈上一團火焰、炸彈爆炸、氣體鋼瓶、腐蝕、骷髏、驚嘆號、健康危害、環境</div><div class="gl-m">火三、氣一、腐一、健三、環一</div></div>
+  </div>
+</section>
 
 <!-- ============ 6. 章節重點 ============ -->
 <section id="chapters">
@@ -1995,7 +2253,7 @@ svg .taga{fill:#D9930C;rx:2}
       <p><b>§57</b> 掃除、上油、檢查、修理或調整→停止運轉及送料，採<b>上鎖或設置標示</b>。</p>
       <p><b>§95</b> 升降機出入口門連鎖：搬器地板與樓板相差 <span class="k">7.5 公分</span>以上時不能開啟。</p>
       <p><b>§128-1</b> 高空工作車工作台上勞工應佩戴安全帽及符合 <span class="k">CNS 14253-1</span> 全身背負式安全帶。</p>
-      <p><b>§278 呼吸防護六步驟</b>：危害辨識及暴露評估→防護具之選擇→使用→維護及管理→教育訓練→成效評估及改善。</p>
+      <p><b>§277-1 呼吸防護六步驟</b>：危害辨識及暴露評估→防護具之選擇→使用→維護及管理→教育訓練→成效評估及改善。</p>
       <p><b>§324 系列四大計畫</b>：324-1 人因性（重複性作業）／324-2 異常工作負荷（輪班夜間長時間）／324-3 執行職務遭受不法侵害／324-6 戶外熱疾病（10 項措施）。前三者紀錄<b>保存 3 年</b>。</p>
     </div>
   </details>
@@ -3362,7 +3620,7 @@ var $$=function(s,r){return [].slice.call((r||document).querySelectorAll(s))};
 /* ---------------- 手寫題庫：清單・定義・程序・新法 ---------------- */
 var BANK=[
 /* 職安法・施行細則 */
-{t:'f',c:'law',q:'職安法用詞的涵蓋範圍由大到小：___ ⊃ ___ ⊃ ___',a:['勞動場所工作場所作業場所'],s:'施行細則 §5'},
+{t:'f',c:'law',q:'職安法用詞的涵蓋範圍由大到小：___ ⊃ ___ ⊃ ___',a:['勞動場所工作場所作業場所'],s:'職安法 §2（原細則 §5，115.7.1 移入母法）'},
 {t:'s',c:'law',q:'「工作者」包含哪三種人？',a:'勞工；自營作業者；其他受工作場所負責人指揮或監督從事勞動之人員。',s:'職安法 §2'},
 {t:'s',c:'law',q:'職安法 §37 應通報職業災害的三種情形？',a:'① 發生死亡災害 ② 罹災人數在 3 人以上 ③ 罹災人數在 1 人以上且需住院治療。八小時內通報勞動檢查機構。',s:'職安法 §37'},
 {t:'s',c:'law',q:'勞檢細則 §31 的重大職業災害認定，與職安法 §37 差在哪裡？',a:'勞檢細則 §31：死亡／罹災 3 人以上／因氨、氯、氟化氫、光氣、硫化氫、二氧化硫等化學物質洩漏致 1 人以上住院。職安法 §37 的「1 人住院」不限化學物質洩漏——這是差別所在。',s:'Section 04'},
@@ -3374,7 +3632,7 @@ var BANK=[
 {t:'s',c:'law',q:'職場霸凌的法定定義（§22-1）？',a:'利用職務或權勢，逾越業務上必要且合理之範圍，持續以冒犯、威脅、冷落、孤立、侮辱或其他不當言詞行為，致勞工身心健康遭受危害。情節重大者，不以持續發生為必要。',s:'職安法 §22-1'},
 {t:'f',c:'law',q:'職場霸凌調查小組之外聘成員比例不得少於 ___',a:['1/2','二分之一','0.5'],s:'職安法 §22-2'},
 {t:'s',c:'law',q:'職場霸凌申訴的兩個時效？',a:'行為終了之日起逾 3 年者不受理；在職期間發生者，得於離職之日起 1 年內申訴。被申訴人為最高負責人時，得逕向地方主管機關申訴。',s:'職安法 §22-3'},
-{t:'s',c:'law',q:'職業安全衛生管理計畫的 16 項內容？',a:'危害辨識、機械管理、危害通識、環境監測、危險場所、採購管理、作業標準、檢查檢點、安衛訓練、防具管理、健康管理、安衛資訊、緊急應變、職災調查、績效評估、其他措施。四字一組共 16 組；職災調查含虛驚事故與影響身心健康事件之調查處理及統計分析。',s:'施行細則 §31'},
+{t:'s',c:'law',q:'115.7.1 起職業安全衛生管理計畫的 15 項內容？（規定在哪一條？）',a:'管理辦法 §12-1（原施行細則 §31 已刪除）。口訣「先評估，再寫十五：機化測評・採承變・標檢訓具健・資應調績其」——機械管理、化學品分類標示通識、作業環境監測、危險性工作場所安全評估、採購承攬變更管理、作業標準、檢查檢點巡視、教育訓練、防護具、健康管理、安衛資訊、緊急應變、職災虛驚及身心健康事件調查（含霸凌）、稽核績效評估、其他。風險評估改為訂計畫前的前置程序。',s:'管理辦法 §12-1'},
 {t:'s',c:'law',q:'安全衛生工作守則的九項內容？',a:'管理權責、機械維護檢查、工作安全衛生標準、教育訓練、健康指導管理、急救搶救、防護設備、事故通報報告、其他。會同勞工代表訂定 → 報經勞動檢查機構備查 → 公告實施。',s:'施行細則 §41'},
 {t:'s',c:'law',q:'須有勞工代表會同參與的四件事？',a:'安全衛生工作守則之訂定、職業災害調查分析、職業安全衛生委員會、作業環境監測計畫之實施。勞工代表產生：有工會者由工會推派；無工會但有勞資會議者由勞方代表推選；均無者由勞工共同推選。',s:'職安法 §34・§37'},
 {t:'s',c:'law',q:'細則 §12 指定之機械設備器具（11 項）？',a:'動力衝剪機械、手推刨床、木材加工用圓盤鋸、動力堆高機、研磨機、研磨輪、防爆電氣設備，加上三種安全裝置（衝剪機械安全裝置、堆高機、其他經指定者）。',s:'施行細則 §12'},
@@ -3401,7 +3659,7 @@ var BANK=[
 {t:'s',c:'fac',q:'局限空間進入許可應由誰簽署？紀錄保存幾年？',a:'由雇主、工作場所負責人或現場作業主管簽署；勞工進出應確認並點名登記，紀錄保存 3 年。',s:'設施規則 §29-6'},
 {t:'s',c:'fac',q:'缺氧作業應公告的五項事項？',a:'有罹患缺氧症之虞之事項、進入該場所應採取之措施、事故發生時之緊急措施及緊急聯絡方式、防護具與救援器具之保管場所、缺氧作業主管姓名。',s:'缺氧規則'},
 {t:'s',c:'fac',q:'停電作業的四個步驟？',a:'開關上鎖或設置標示 → 確認無殘留電荷並放電 → 以檢電器具確認無電並短路接地 → 以藍帶圍成「停電作業區」、紅帶圍「有電危險區」。',s:'設施規則'},
-{t:'s',c:'fac',q:'呼吸防護計畫的六個步驟？',a:'危害辨識及暴露評估 → 防護具之選擇 → 使用 → 維護及管理 → 教育訓練 → 成效評估及改善。',s:'設施規則 §278'},
+{t:'s',c:'fac',q:'呼吸防護計畫的六個步驟？',a:'危害辨識及暴露評估 → 防護具之選擇 → 使用 → 維護及管理 → 教育訓練 → 成效評估及改善。',s:'設施規則 §277-1'},
 {t:'s',c:'fac',q:'設施規則 §324 系列四大計畫？',a:'§324-1 人因性危害預防（重複性作業）、§324-2 異常工作負荷促發疾病預防（輪班、夜間、長時間工作）、§324-3 執行職務遭受不法侵害預防、§324-6 戶外高氣溫作業熱疾病預防（10 項措施）。前三者紀錄保存 3 年。',s:'設施規則 §324'},
 {t:'s',c:'fac',q:'研磨機的兩個試轉時間？',a:'每日作業開始前試轉 1 分鐘以上；研磨輪更換時應先檢驗有無裂痕，並在防護罩下試轉 3 分鐘以上。除側用研磨輪外不得使用側面。',s:'設施規則 §62'},
 {t:'m',c:'fac',q:'鑽孔機、截角機等有顯著危險之旋轉刃具作業，應標示什麼？',o:['不得使用手套','應戴防切割手套','應戴防振手套','應戴絕緣手套'],k:'不得使用手套',s:'設施規則 §56'},
@@ -3481,13 +3739,78 @@ var BANK=[
 {t:'s',c:'nw',q:'工程管理辦法 §14 的「安衛專業人員」與「工程專業人員」各指誰？',a:'安衛專業人員：工業安全技師、施工安全評估人員、職業安全衛生管理員。工程專業人員：建築師、土木工程技師、結構工程技師、大地工程技師、水利工程技師、水土保持技師。均須具 1 年以上工程相關實務經驗。',s:'工程管理辦法 §14'},
 {t:'f',c:'nw',q:'勞工健康服務專業機構之認可效期最長 ___ 年；服務紀錄至少保存 ___ 年',a:['3 3','33'],s:'專管規則'},
 {t:'s',c:'nw',q:'勞工健康服務專業機構的四種類別？',a:'甲一類：認可之特殊健檢醫療機構；甲二類：認可之顧問機構（專職專登護理及相關人員至少 5 人）；甲三類：健保特約醫院／診所（醫護相至少 2 類 4 人專一登錄，比率 60%）；乙類：健保特約醫院／診所（醫護至少 2 人，1 人專一登錄，比率 50%）。甲類服務所有事業，乙類限第二、三類且毋須配置職醫者。',s:'專管規則 §3–§5'},
-{t:'s',c:'nw',q:'施行細則新增哪一項氣候相關的協議事項？',a:'高、低氣溫等不利氣候條件所衍生之風險（如熱危害），須納入共同作業協議組織之防護事項；並明訂原事業單位應召集「各級承攬人」之工作場所負責人參與協議。',s:'施行細則'}
+{t:'s',c:'nw',q:'施行細則新增哪一項氣候相關的協議事項？',a:'高、低氣溫等不利氣候條件所衍生之風險（如熱危害），須納入共同作業協議組織之防護事項；並明訂原事業單位應召集「各級承攬人」之工作場所負責人參與協議。',s:'施行細則'},
+/* 115/11 補：最新動態 */
+{t:'f',c:'nw',q:'115.7.1 起，勞工人數未滿 ___ 人的事業單位，得以安全衛生管理執行紀錄或文件代替職業安全衛生管理計畫（舊法寫「以下」）',a:['30'],s:'管理辦法 §12-1'},
+{t:'f',c:'nw',q:'職業安全衛生管理計畫內容 115.7.1 起規定於管理辦法 §12-1，共 ___ 項',a:['15','十五'],s:'管理辦法 §12-1'},
+{t:'s',c:'nw',q:'施行細則 115.6.26 修正刪除了哪些條文？分別去哪了？',a:'§5 場所定義移入職安法 §2；§31 管理計畫移列管理辦法 §12-1；§28 特別危害健康作業、§30 健檢紀錄保存改由健保規則規定；§34 亦刪除。另新增 §36-1 出租出借危害告知。',s:'施行細則'},
+{t:'s',c:'nw',q:'設施規則 115.6.30 修正，哪些條文延到 116.1.1 才施行？',a:'§21-3 高風險作業風險評估及作業前通報、§57 機械維修停機上鎖及危害防止計畫、§116 刪除堆高機搭載人員但書、§185-1～§185-4 四氫化矽／硝酸銨／有機過氧化物／熱媒油。口訣：評 21-3、堆 116、矽銨過熱 185。',s:'設施規則 §328'},
+{t:'f',c:'nw',q:'職安法 §43 罰鍰最高 300 萬元，得依規模、性質或情節加重至法定最高額的二分之一，即最高 ___ 萬元',a:['450'],s:'職安法 §43'},
+{t:'f',c:'nw',q:'雇主通報之作業環境監測資料經查核虛偽不實，處 ___ 萬元以上 ___ 萬元以下罰鍰',a:['30 100','30100'],s:'職安法 §42'},
+{t:'s',c:'nw',q:'緊急應變措施指引（115/10/27）計畫書的 7 項內容？',a:'應變組織及權責、通報程序、各類緊急狀況處理程序、避難疏散、應變設備、外部救援聯繫、演練計畫與紀錄。口訣：組・通・處・疏・設・外・演。避難疏散路線至少 2 條。',s:'職安署緊急應變措施指引'},
+{t:'s',c:'nw',q:'設施規則新增 §299-1 規定什麼？',a:'冷藏室、冷凍室、地窖等密閉設施內部作業時，出入口之門或蓋應有不致閉鎖之措施（避免被反鎖在內）。',s:'設施規則 §299-1'},
+/* 名詞解說 */
+{t:'s',c:'gl',q:'「容許濃度」（PEL）是什麼？',a:'勞工每天暴露於該濃度下，絕大多數人不致產生不良反應的上限值。我國分成 TWA、STEL、C 三種。　勞工作業場所容許暴露標準（附表一、附表二）。口訣：容許濃度三兄弟：平均、短時、天花板。',s:'名詞解說・濃度與暴露'},
+{t:'s',c:'gl',q:'「八小時日時量平均容許濃度」（PEL-TWA）是什麼？',a:'把一個工作日各時段濃度乘以時間加總，再除以總時間，所得平均值不得超過的上限。　TWA ＝ Σ(Cᵢ·tᵢ) ÷ Σtᵢ；計算以 8 小時為基準。口訣：濃度乘時間，加總再平均。',s:'名詞解說・濃度與暴露'},
+{t:'s',c:'gl',q:'「短時間時量平均容許濃度」（PEL-STEL）是什麼？',a:'任何一次連續 15 分鐘的時量平均濃度上限，防止短時間高濃度造成急性危害。　STEL ＝ TWA × 變量係數（3／2／1.5／1.25／1）。口訣：十五分鐘一格，不准衝太高。',s:'名詞解說・濃度與暴露'},
+{t:'s',c:'gl',q:'「最高容許濃度」（PEL-C）是什麼？',a:'任何時間、任何瞬間都不得超過的濃度，多用於刺激性強或急毒性高的物質。　附表一符號欄註有「高」字者。口訣：天花板，碰一下就算違規。',s:'名詞解說・濃度與暴露'},
+{t:'s',c:'gl',q:'「變量係數」是什麼？',a:'把 TWA 換算成 STEL 用的倍數；容許濃度越高，係數越小。　0–<1：3｜1–<10：2｜10–<100：1.5｜100–<1000：1.25｜≥1000：1。口訣：三・二・一五・一二五・一。',s:'名詞解說・濃度與暴露'},
+{t:'s',c:'gl',q:'「相加效應」（Additive effect）是什麼？',a:'兩種以上有害物作用於同一器官時，各自的暴露比值相加；總和大於 1 即超過容許濃度。　Σ(TWAᵢ ÷ PELᵢ) ＞ 1 即不合格。口訣：各自及格，加起來可能不及格。',s:'名詞解說・濃度與暴露'},
+{t:'s',c:'gl',q:'「ppm」（parts per million）是什麼？',a:'百萬分之一。在 25℃、1 大氣壓下，每立方公尺空氣中含有害物的立方公分數。　mg/m³ ＝ ppm × M ÷ 24.45。口訣：24.45 是換算的鑰匙。',s:'名詞解說・濃度與暴露'},
+{t:'s',c:'gl',q:'「mg/m³ 與 f/cc」是什麼？',a:'mg/m³：每立方公尺空氣中有害物的毫克數，用於粉塵、燻煙等；f/cc：每立方公分空氣中的纖維根數，用於石綿等纖維。　勞工作業場所容許暴露標準。口訣：氣體看 ppm，粉塵看毫克，纖維數根數。',s:'名詞解說・濃度與暴露'},
+{t:'s',c:'gl',q:'「生物偵測」（BEI）是什麼？',a:'驗血或驗尿看體內代謝物，判斷實際吸收了多少，比空氣監測更貼近真實暴露。　例：正己烷驗尿中 2,5-己二酮；鉛驗血中鉛。口訣：空氣看環境，尿血看身體。',s:'名詞解說・濃度與暴露'},
+{t:'s',c:'gl',q:'「立即致危濃度」（IDLH）是什麼？',a:'暴露 30 分鐘內可能致死或造成不可逆傷害、甚至無法自行逃生的濃度。屬美國 NIOSH 概念，用來選擇呼吸防護具。　我國法規未直接引用；選防護具時常見。口訣：超過 IDLH 只能用供氣式。',s:'名詞解說・濃度與暴露'},
+{t:'s',c:'gl',q:'「作業環境監測」是什麼？',a:'依計畫對作業環境採樣、測定並分析，掌握勞工暴露狀況。分化學性（有機溶劑、特化、粉塵、鉛）與物理性（噪音、WBGT）。　監測辦法；實施前 15 日通報計畫；會同職安衛人員及勞工代表。口訣：WBGT 三個月，鉛類一年，其餘半年。',s:'名詞解說・濃度與暴露'},
+{t:'s',c:'gl',q:'「化學品分級管理」（CCB）是什麼？',a:'對沒有容許濃度的化學品，依健康危害分類、散布狀況與使用量，分級並對應控制方法。　危害性化學品評估及分級管理辦法。口訣：沒標準就分級，分級就有對策。',s:'名詞解說・濃度與暴露'},
+{t:'s',c:'gl',q:'「爆炸下限」（LEL）是什麼？',a:'可燃性氣體或蒸氣在空氣中能被點燃爆炸的最低濃度；低於此濃度「太稀」燒不起來。　≥ 30% LEL 屬有立即發生危險之虞（施行細則 §25）。口訣：太稀不爆，三成就撤。',s:'名詞解說・火災爆炸'},
+{t:'s',c:'gl',q:'「爆炸上限」（UEL）是什麼？',a:'能被點燃爆炸的最高濃度；高於此濃度「太濃」缺氧燒不起來，但一稀釋就會進入爆炸範圍。　例：甲烷約 5%～15%。口訣：太濃不爆，一稀就爆。',s:'名詞解說・火災爆炸'},
+{t:'s',c:'gl',q:'「爆炸範圍與危險指數」（H）是什麼？',a:'LEL 到 UEL 之間就是爆炸範圍。範圍越寬、下限越低越危險。　H ＝ (UEL − LEL) ÷ LEL。口訣：上減下，除以下。',s:'名詞解說・火災爆炸'},
+{t:'s',c:'gl',q:'「勒沙特列定律」（Le Chatelier）是什麼？',a:'估算混合可燃氣體的爆炸下限。　LEL混 ＝ 100 ÷ Σ(體積%ᵢ ÷ LELᵢ)。口訣：一百除以各家比例。',s:'名詞解說・火災爆炸'},
+{t:'s',c:'gl',q:'「閃火點」（Flash point）是什麼？',a:'液體表面揮發的蒸氣，遇火源會「閃一下」的最低液溫。是易燃液體分級依據。　易燃液體：閃火點未滿 65℃，分 −30／0／30／65 四級。口訣：閃一下就熄＝閃火點。',s:'名詞解說・火災爆炸'},
+{t:'s',c:'gl',q:'「燃點與自燃溫度」（Fire point）是什麼？',a:'燃點：點火後能持續燃燒的最低溫度，略高於閃火點。自燃溫度：不需火源，加熱到此溫度即自行起火。　題目常考三者高低：閃火點 ＜ 燃點 ＜ 自燃溫度。口訣：閃、燃、自燃，一個比一個熱。',s:'名詞解說・火災爆炸'},
+{t:'s',c:'gl',q:'「粉塵爆炸五要素」（Dust explosion pentagon）是什麼？',a:'可燃性粉塵、助燃物（氧）、火源，再加上粉塵懸浮擴散與侷限空間，五者同時存在才會爆。　比火災三要素多出「懸浮」與「侷限」。口訣：三角火，加兩邊變五角。',s:'名詞解說・火災爆炸'},
+{t:'s',c:'gl',q:'「危險物」是什麼？',a:'爆炸性物質、著火性物質、易燃液體、氧化性物質、可燃性氣體等五大類。　設施規則 §11 附表一。口訣：爆・著・易・氧・可。',s:'名詞解說・火災爆炸'},
+{t:'s',c:'gl',q:'「時量平均音壓級」（L-TWA）是什麼？',a:'以 A 加權（模擬人耳）量測的噪音，換算成 8 小時平均值。我國交換率 5 分貝。　8 小時 85 dBA 起聽力保護；90 dBA 超過要工程改善。口訣：九十配八，加五減半。',s:'名詞解說・物理性危害'},
+{t:'s',c:'gl',q:'「噪音劑量」（D）是什麼？',a:'各段實際暴露時間除以該音量容許時間後相加。1（100%）是上限，0.5（50%）相當 85 dBA。　D ＝ Σ(tᵢ ÷ Tᵢ)；Tᵢ ＝ 8 ÷ 2^((L−90)/5)。口訣：實際除以容許，加起來別過一。',s:'名詞解說・物理性危害'},
+{t:'s',c:'gl',q:'「綜合溫度熱指數」（WBGT）是什麼？',a:'綜合濕度、輻射熱與氣溫的熱危害指標。　戶外有日曬 0.7Tnwb＋0.2Tg＋0.1Ta；無日曬 0.7Tnwb＋0.3Tg。口訣：濕七黑二乾一，室內黑三。',s:'名詞解說・物理性危害'},
+{t:'s',c:'gl',q:'「米燭光」（lux）是什麼？',a:'照度單位，每平方公尺接收 1 流明的光通量。　一般辦公 300、精密 500–1000、極精密 1000 以上。口訣：辦公三百，精密上千。',s:'名詞解說・物理性危害'},
+{t:'s',c:'gl',q:'「缺氧」是什麼？',a:'空氣中氧氣濃度未滿 18% 的狀態。　缺氧症預防規則 §3；換氣不得使用純氧。口訣：十八以下就是缺氧。',s:'名詞解說・物理性危害'},
+{t:'s',c:'gl',q:'「局限空間」（Confined space）是什麼？',a:'非供勞工在其內部從事經常性作業、勞工進出方法受限制，且無法以自然通風維持充分清淨空氣的空間。　設施規則 §19-1；進入許可、進出紀錄保存 3 年。口訣：不常待、難進出、不通風。',s:'名詞解說・物理性危害'},
+{t:'s',c:'gl',q:'「失能傷害」（Disabling injury）是什麼？',a:'造成死亡、永久全失能、永久部分失能或暫時全失能的職業傷害。　死亡、永久全失能各計 6000 日損失。口訣：死、全、部分、暫時，四種。',s:'名詞解說・災害統計'},
+{t:'s',c:'gl',q:'「失能傷害頻率」（FR）是什麼？',a:'每百萬工時發生幾次失能傷害。　FR ＝ 次數 × 10⁶ ÷ 總經歷工時；小數兩位以下捨去。口訣：FR 算次數。',s:'名詞解說・災害統計'},
+{t:'s',c:'gl',q:'「失能傷害嚴重率」（SR）是什麼？',a:'每百萬工時損失多少日。　SR ＝ 損失日數 × 10⁶ ÷ 總經歷工時；取整數，以下捨去。口訣：SR 算天數，只留整數。',s:'名詞解說・災害統計'},
+{t:'s',c:'gl',q:'「綜合傷害指數」（FSI）是什麼？',a:'把頻率與嚴重率合成一個指標，方便比較。　FSI ＝ √(FR × SR ÷ 1000)；小數兩位以下捨去。口訣：FR 乘 SR，除千再開根。',s:'名詞解說・災害統計'},
+{t:'s',c:'gl',q:'「風險」（Risk）是什麼？',a:'危害事件發生的可能性與後果嚴重度的組合。　風險 ＝ 嚴重度 × 可能性。口訣：嚴重乘機率。',s:'名詞解說・風險評估與管理'},
+{t:'s',c:'gl',q:'「危害辨識」（Hazard identification）是什麼？',a:'找出可能造成傷害的來源、情境或行為，是風險評估的第一步。　115.7.1 起改為訂管理計畫前的前置程序。口訣：先找危害，才評風險。',s:'名詞解說・風險評估與管理'},
+{t:'s',c:'gl',q:'「控制層級」（Hierarchy of controls）是什麼？',a:'降低風險的措施依效果排序：消除、取代、工程控制、管理控制、個人防護具。　CNS 45001 8.1.2。口訣：除・代・工・管・個。',s:'名詞解說・風險評估與管理'},
+{t:'s',c:'gl',q:'「危害及可操作性分析」（HazOp）是什麼？',a:'以引導字（無、多、少、相反、部分…）逐一偏離設計意圖，找出製程可能的危害與操作問題。　製程安全評估定期實施辦法 §5 六種方法之一。口訣：引導字一個一個問。',s:'名詞解說・風險評估與管理'},
+{t:'s',c:'gl',q:'「失誤模式及影響分析」（FMEA）是什麼？',a:'逐一列出每個元件可能的失效模式，評估其對系統的影響。屬由下而上。　製程安全評估方法。口訣：從零件往上推。',s:'名詞解說・風險評估與管理'},
+{t:'s',c:'gl',q:'「故障樹分析」（FTA）是什麼？',a:'以不希望發生的頂端事件為起點，用及閘（AND）、或閘（OR）往下推出基本原因。屬由上而下、可量化。　製程安全評估方法。口訣：從事故往下挖。',s:'名詞解說・風險評估與管理'},
+{t:'s',c:'gl',q:'「變更管理」（MOC）是什麼？',a:'製程、設備、物料、人員或作業程序變更前，先辨識危害、評估風險並採預防措施。　管理辦法 §12-3。口訣：要改先評估。',s:'名詞解說・風險評估與管理'},
+{t:'s',c:'gl',q:'「上鎖掛牌」（LOTO）是什麼？',a:'維修、掃除、上油前停止機械並隔離能源，以鎖具或標示防止他人誤啟動。　設施規則 §57（修正版 116.1.1 施行，新增危害防止計畫）。口訣：停機、斷源、上鎖、掛牌。',s:'名詞解說・風險評估與管理'},
+{t:'s',c:'gl',q:'「職安衛管理系統」（CNS 45001）是什麼？',a:'以 PDCA 持續改善的管理架構。115.7.1 起管理辦法用語改為「管理制度」。　第一類 ≥200 人、第二類 ≥500 人等應建置（管理辦法 §12-2）。口訣：六 P、七八 D、九 C、十 A。',s:'名詞解說・風險評估與管理'},
+{t:'s',c:'gl',q:'「自動檢查」是什麼？',a:'事業單位自己做的檢查，分定期檢查、重點檢查、作業檢點三種。　管理辦法 §13 以下。口訣：定期照週期，重點看修過，檢點在作業前。',s:'名詞解說・風險評估與管理'},
+{t:'s',c:'gl',q:'「工作者」是什麼？',a:'勞工、自營作業者，以及其他受工作場所負責人指揮或監督從事勞動的人員。　職安法 §2。口訣：勞工＋自營＋受指揮。',s:'名詞解說・法定用語'},
+{t:'s',c:'gl',q:'「勞動場所・工作場所・作業場所」是什麼？',a:'範圍由大到小：勞動場所 ⊃ 工作場所 ⊃ 作業場所。　115.7.1 起定義移入職安法 §2（原細則 §5 刪除）。口訣：勞・工・作，由大到小。',s:'名詞解說・法定用語'},
+{t:'s',c:'gl',q:'「原事業單位」是什麼？',a:'以其事業交付承攬，而與承攬人一起在同一期間、同一工作場所共同作業的事業單位。　職安法 §27；應設協議組織。口訣：發包又一起做的那一方。',s:'名詞解說・法定用語'},
+{t:'s',c:'gl',q:'「主施工者」是什麼？',a:'業主把工程交付兩個以上施工者（平行承攬）時，指定其中一家負責統合管理。　職安法 §27-1；書面或電子文件指定。口訣：平行多家，指定一家當班長。',s:'名詞解說・法定用語'},
+{t:'s',c:'gl',q:'「有立即發生危險之虞」是什麼？',a:'可能立刻造成傷亡的狀態，勞工得自行停止作業並退避，雇主不得因此處分。　職安法 §18；細則 §25 列九種情形。口訣：墜・電・塌・火・毒。',s:'名詞解說・法定用語'},
+{t:'s',c:'gl',q:'「重大職業災害（應通報）」是什麼？',a:'死亡；罹災 3 人以上；罹災 1 人以上且需住院。雇主應於 8 小時內通報檢查機構。　職安法 §37。口訣：死、三、一住院，八小時。',s:'名詞解說・法定用語'},
+{t:'s',c:'gl',q:'「職場霸凌」是什麼？',a:'利用職務或權勢，逾越業務上必要且合理範圍，持續以不當言詞行為使人身心受害；情節重大不以持續為必要。　職安法 §22-1。口訣：權勢、逾越、持續、受害。',s:'名詞解說・法定用語'},
+{t:'s',c:'gl',q:'「執行職務遭受不法侵害」是什麼？',a:'範圍比霸凌廣，含主管、同事、客戶或外部人員造成的身體或精神侵害。　設施規則 §324-3；100 人以上訂計畫。口訣：霸凌是不法侵害的一種。',s:'名詞解說・法定用語'},
+{t:'s',c:'gl',q:'「特別危害健康作業」是什麼？',a:'高溫、噪音、游離輻射、異常氣壓、鉛、四烷基鉛、粉塵、指定有機溶劑、指定特化物、黃磷、聯啶或巴拉刈等，需做特殊健檢的作業。　健保規則（原細則 §28 已刪除）。口訣：特危要特檢。',s:'名詞解說・法定用語'},
+{t:'s',c:'gl',q:'「危險性機械・危險性設備」是什麼？',a:'機械：起重機、人字臂、營建用升降機及提升機、吊籠；設備：鍋爐、壓力容器、高壓氣體特定設備及容器。須經檢查合格才能使用，操作人員須受訓或技能檢定合格。　職安法 §16、§24。口訣：機械會吊會升，設備會壓會燒。',s:'名詞解說・法定用語'},
+{t:'s',c:'gl',q:'「特定機械」是什麼？',a:'非屬危險性機械，但操作人員須受訓：推土機、挖掘機、鏟裝機、裝載機、堆高機、高空工作車、0.5～未滿 3 公噸之起重機等。　職安法 §24（115.7.1 新制）。口訣：挖推鏟裝堆高空，小吊車。',s:'名詞解說・法定用語'},
+{t:'s',c:'gl',q:'「型式驗證」（TC）是什麼？',a:'特定機械設備器具須經驗證機構驗證合格，張貼菱形 TC 標章才能產製、輸入。　職安法 §8；證書有效 3 年。口訣：TC 菱形、TD 圓形。',s:'名詞解說・法定用語'},
+{t:'s',c:'gl',q:'「GHS」（Globally Harmonized System）是什麼？',a:'全球化學品分類及標示調和制度，統一危害分類、標示圖式與安全資料表格式。　危害性化學品標示及通識規則。口訣：全球一張圖。',s:'名詞解說・化學品標示'},
+{t:'s',c:'gl',q:'「安全資料表」（SDS）是什麼？',a:'記載化學品危害、防護、急救、儲存等資訊的文件，共 16 大項。　至少每 3 年檢討一次，更新紀錄保存 3 年。口訣：十六項、三年審。',s:'名詞解說・化學品標示'},
+{t:'s',c:'gl',q:'「危害圖式」（Pictogram）是什麼？',a:'紅色菱框、白底黑符號的九種圖示。　火焰、圓圈上一團火焰、炸彈爆炸、氣體鋼瓶、腐蝕、骷髏、驚嘆號、健康危害、環境。口訣：火三、氣一、腐一、健三、環一。',s:'名詞解說・化學品標示'}
 ];
 
 /* ---------------- 題庫組裝 ---------------- */
 var CATLAB={len:'尺寸・高度',ppl:'人數門檻',time:'時間・年限',env:'溫濕・濃度',load:'壓力・重量',pct:'百分比・係數',trap:'易混淆陷阱',
   fx_vent:'通風換氣',fx_stat:'災害統計',fx_noise:'噪音',fx_env:'環境危害',fx_mech:'機械安全',fx_fire:'火災爆炸',fx_heat:'溫濕環境',fx_elec:'電氣安全',fx_light:'採光照明',fx_misc:'其他公式',
-  law:'職安法・細則',org:'管理辦法・組織',edu:'教育訓練',fac:'設施規則',con:'營造標準',hlt:'健康保護',chm:'化學・監測',mac:'機械・高壓氣體',base:'勞基法・勞檢',nw:'115.7.1 新法'};
+  law:'職安法・細則',org:'管理辦法・組織',edu:'教育訓練',fac:'設施規則',con:'營造標準',hlt:'健康保護',chm:'化學・監測',mac:'機械・高壓氣體',base:'勞基法・勞檢',nw:'115.7.1 新法',gl:'名詞解說'};
 
 var POOL={num:[],rev:[],src:[],qa:[],fx:[]},BUILT=false;
 
@@ -4111,8 +4434,24 @@ function build(){
   }
   if(nw.length) LISTS['nw']={name:'115.7.1 新法重點',items:nw};
 
+  var gls=[];
+  $$('#gloss .gl').forEach(function(g){
+    var tEl=g.querySelector('.gl-t'),ab=g.querySelector('.gl-ab');
+    var term=txt(tEl); var abt=ab?txt(ab):''; if(abt) term=term.replace(abt,'').trim();
+    var d=txt(g.querySelector('.gl-d')),s=txt(g.querySelector('.gl-s')),m=txt(g.querySelector('.gl-m'));
+    var grp=txt(g.closest('.gl-grid').previousElementSibling)||'名詞解說';
+    gls.push({
+      cat:'名詞・'+grp, el:g, q:term+(abt?'（'+abt+'）':''), a:d+'　'+s+'　口訣：'+m,
+      qs:'名詞解說。'+term+'，是什麼意思？',
+      as:period(d)+'　口訣是，'+period(m),
+      cite:'',
+      rs:term+'。'+period(d)+'　口訣，'+period(m)
+    });
+  });
+  if(gls.length) LISTS['gl']={name:'名詞解說',items:gls};
+
   var all=[];
-  ['num_all','traps','mn','fx','nw'].forEach(function(k){ if(LISTS[k]) all=all.concat(LISTS[k].items) });
+  ['num_all','traps','mn','fx','nw','gl'].forEach(function(k){ if(LISTS[k]) all=all.concat(LISTS[k].items) });
   LISTS['all']={name:'全部・綜合',items:all};
 
   // 給每則一個穩定 id（給最愛用）
@@ -4157,7 +4496,7 @@ var ORDER=[
   ['num_all','數字牆・全部'],
   ['num_len','數字・尺寸高度'],['num_ppl','數字・人數門檻'],['num_time','數字・時間年限'],
   ['num_env','數字・溫濕濃度'],['num_load','數字・壓力重量'],['num_pct','數字・百分比係數'],
-  ['traps','易混淆陷阱'],['mn','口訣與清單'],['fx','公式卡'],['nw','115.7.1 新法']
+  ['traps','易混淆陷阱'],['mn','口訣與清單'],['fx','公式卡'],['nw','115.7.1 新法'],['gl','名詞解說']
 ];
 function renderList(){
   build();
@@ -4357,6 +4696,7 @@ function attachButtons(){
   add(LISTS['fx'].items);
   if(LISTS['mn']) add(LISTS['mn'].items);
   if(LISTS['traps']) add(LISTS['traps'].items);
+  if(LISTS['gl']) add(LISTS['gl'].items);
 }
 
 /* ============ 控制項 ============ */
@@ -4509,7 +4849,7 @@ var LAWS=[
  {g:'母法與施行細則',n:'職業安全衛生法',s:'職安法',p:'N0060001',
   d:'民國 114/12/19 修正公布，115/7/1 施行',note:'全部 55 條。本次修法修正 25 條、新增 6 條'},
  {g:'母法與施行細則',n:'職業安全衛生法施行細則',s:'施行細則',p:'N0060002',
-  d:'配合母法同步修正',note:'定義性條文集中地：§5 勞動場所／工作場所／作業場所、§25 立即危險、§31 管理計畫 16 項、§41 工作守則 9 項'},
+  d:'配合母法同步修正',note:'115.7.1 大幅重整：§5 場所定義移入母法 §2；§28 特危作業、§30 健檢紀錄、§31 管理計畫（改管理辦法 §12-1）、§34 均刪除；新增 §36-1 出租出借危害告知；仍在：§25 立即危險、§41 工作守則 9 項、§51 職災統計 30 人'},
  {g:'勞動檢查相關',n:'勞動檢查法',s:'勞檢法',p:'N0070001',
   d:'—',note:'§13 不得檢查事項與例外、§26 危險性工作場所審查、§27–§28 停工、§33 申訴'},
  {g:'勞動檢查相關',n:'勞動檢查法施行細則',s:'勞檢細則',p:'N0070004',
@@ -4619,9 +4959,9 @@ function renderGrid(){
 var IDX=[];
 function buildIndex(){
   if(IDX.length) return;
-  var scope=['#update','#numbers','#tables','#traps','#mn','#chapters','#calc','#figs'];
+  var scope=['#update','#numbers','#tables','#traps','#mn','#gloss','#chapters','#calc','#figs'];
   var SEC={update:'Section 00 法規更新',numbers:'Section 01 數字牆',tables:'Section 03 對照表',
-           traps:'Section 04 易混淆',mn:'Section 05 口訣',chapters:'Section 06 分章複習',
+           traps:'Section 04 易混淆',mn:'Section 05 口訣',gloss:'Section 05B 名詞解說',chapters:'Section 06 分章複習',
            calc:'Section 07 計算題',figs:'Section 02 圖解'};
   var names=Object.keys(SHORT2P).sort(function(a,b){return b.length-a.length});
   var CITE=new RegExp('((?:'+names.map(function(x){return x.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')}).join('|')
@@ -4631,7 +4971,7 @@ function buildIndex(){
     var root=$(sel); if(!root) return;
     var secName=SEC[sel.slice(1)]||sel;
     // 以「有意義的容器」為單位擷取
-    var units=$$('.dim, .trap li, tr, .fxc, figure, .mn, .ch', root);
+    var units=$$('.dim, .trap li, tr, .fxc, figure, .mn, .ch, .gl', root);
     if(!units.length) units=[root];
     units.forEach(function(u){
       var t=txt(u); if(!t||t.length<4) return;
@@ -4826,7 +5166,7 @@ renderGrid(); buildIndex(); fillWhich(); renderStore(); rebuildLocalSearch();
 })();
 </script>
 <footer>
-  依《職安乙級技能檢定法規重點 2026 年 01 月》（Sherry 賴秋琴 編）之法條內容重新編排，圖、對照表與陷阱整理為本檔自製。Section 00 之修法資訊查證自勞動部（115-06-23 新聞稿）及職安署「新修職安法整體說明及施行規劃」（115-06-30）。其餘條文數字未逐條重新核對，以主管機關公告現行條文為準。校閱日期：115 年 7 月 22 日。Section 00「子法修正重點」、§24 特定機械表、自動檢查新增項目與健保規則新制，整理自勞動部職安署「新修職業安全衛生法專區→宣導懶人包/圖卡/手冊」之《職安法及相關子法訓練教材》（115/07/01 發布）；該教材載明「內容僅供參考，相關資訊均依發布施行之內容為準」。Section 08 自我測驗之題目由本檔 Section 01～07 之內容於瀏覽器端即時生成，另含手寫題庫 90 題；作答紀錄僅存於本機瀏覽器。Section 09 有聲複習使用瀏覽器內建語音合成（Web Speech API）即時朗讀，不含錄音檔、不需連網、不上傳任何內容。Section 10 法規查詢庫不含法條全文（全國法規資料庫禁止程式自動存取），僅提供經查證之 pcode 深連結、本檔條號索引與本機匯入功能；法條全文以主管機關公告為準。Section 02 之 12 張圖解為本檔自繪，依工程製圖慣例重繪（尺寸線、剖面線、材質填充、標註框），Fig.09 危害圖式為 GHS 九款象形圖之示意重繪，非官方原檔。Section 07 計算題依同編者《計算題加強班講義 20260314》之題型重編，推導說明、辨題流程與四張圖解為本檔自製；已標註講義中 mg/m³ 換算式與 Jones 上限式 (0.35Cst) 之誤植。
+  依《職安乙級技能檢定法規重點 2026 年 01 月》（Sherry 賴秋琴 編）之法條內容重新編排，圖、對照表與陷阱整理為本檔自製。Section 00 之修法資訊查證自勞動部（115-06-23 新聞稿）及職安署「新修職安法整體說明及施行規劃」（115-06-30）。其餘條文數字未逐條重新核對，以主管機關公告現行條文為準。校閱日期：115 年 7 月 22 日；第二輪校閱 115 年 11 月 7 日（依施行細則、管理辦法、設施規則 115 年 6 月修正總說明，職安法現行條文，及職安署 115/9–10 函頒指引更正與補充）。Section 05B 名詞解說與新增口訣為本檔自編。Section 00「子法修正重點」、§24 特定機械表、自動檢查新增項目與健保規則新制，整理自勞動部職安署「新修職業安全衛生法專區→宣導懶人包/圖卡/手冊」之《職安法及相關子法訓練教材》（115/07/01 發布）；該教材載明「內容僅供參考，相關資訊均依發布施行之內容為準」。Section 08 自我測驗之題目由本檔 Section 01～07 之內容於瀏覽器端即時生成，另含手寫題庫 165 題（含名詞解說 55 題）；作答紀錄僅存於本機瀏覽器。Section 09 有聲複習使用瀏覽器內建語音合成（Web Speech API）即時朗讀，不含錄音檔、不需連網、不上傳任何內容。Section 10 法規查詢庫不含法條全文（全國法規資料庫禁止程式自動存取），僅提供經查證之 pcode 深連結、本檔條號索引與本機匯入功能；法條全文以主管機關公告為準。Section 02 之 12 張圖解為本檔自繪，依工程製圖慣例重繪（尺寸線、剖面線、材質填充、標註框），Fig.09 危害圖式為 GHS 九款象形圖之示意重繪，非官方原檔。Section 07 計算題依同編者《計算題加強班講義 20260314》之題型重編，推導說明、辨題流程與四張圖解為本檔自製；已標註講義中 mg/m³ 換算式與 Jones 上限式 (0.35Cst) 之誤植。
 </footer>
 </div>
 
@@ -4837,7 +5177,7 @@ renderGrid(); buildIndex(); fillWhich(); renderStore(); rebuildLocalSearch();
   const dims = [...document.querySelectorAll('.dim')];
   const count = document.getElementById('count');
   const empty = document.getElementById('empty');
-  const blocks = [...document.querySelectorAll('details, .trap, figure, .mn')];
+  const blocks = [...document.querySelectorAll('details, .trap, figure, .mn, .gl')];
   let filter = 'all';
 
   function norm(s){ return s.toLowerCase().replace(/\s+/g,''); }
@@ -4920,6 +5260,32 @@ renderGrid(); buildIndex(); fillWhich(); renderStore(); rebuildLocalSearch();
     });
   },{rootMargin:'-110px 0px -70% 0px'});
   Object.keys(map).forEach(function(id){ io.observe(document.getElementById(id)) });
+})();
+</script>
+
+<script>
+/* 名詞解說：篩選 */
+(function(){
+  var sec=document.getElementById('gloss'); if(!sec) return;
+  var q=document.getElementById('glq'),chips=[].slice.call(sec.querySelectorAll('.gl-c')),cur='all';
+  var cards=[].slice.call(sec.querySelectorAll('.gl')),heads=[].slice.call(sec.querySelectorAll('.gl-h')),grids=[].slice.call(sec.querySelectorAll('.gl-grid'));
+  var none=document.getElementById('gl-none');
+  function norm(s){return (s||'').toLowerCase().replace(/[\s　\-－]/g,'')}
+  function run(){
+    var k=norm(q.value),shown=0,per={};
+    cards.forEach(function(c){
+      var ok=(cur==='all'||c.dataset.g===cur)&&(!k||norm(c.textContent).indexOf(k)>=0);
+      c.style.display=ok?'':'none'; if(ok){shown++;per[c.dataset.g]=1}
+    });
+    heads.forEach(function(h){h.style.display=per[h.dataset.g]?'':'none'});
+    grids.forEach(function(g){g.style.display=per[g.dataset.g]?'':'none'});
+    none.style.display=shown?'none':'';
+  }
+  chips.forEach(function(b){b.addEventListener('click',function(){
+    cur=b.dataset.g; chips.forEach(function(x){x.classList.toggle('on',x===b)}); run();
+  })});
+  q.addEventListener('input',run);
+  q.addEventListener('keydown',function(e){e.stopPropagation()});
 })();
 </script>
 </body>
