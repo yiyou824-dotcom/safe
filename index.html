@@ -261,7 +261,7 @@ footer{border-top:2px solid var(--ink);padding-top:16px;font-size:12.5px;color:v
 .spk svg{width:11px;height:11px;display:block}
 .dim .spk{position:absolute;top:9px;right:9px;padding:3px 5px}
 .dim{padding-right:40px}
-.fxc{position:relative}
+.fxc{position:relative;padding-bottom:38px}
 .fxc .spk{position:absolute;top:12px;right:12px}
 .qz .spk{margin-left:8px}
 .reading{outline:2px solid var(--blue);outline-offset:2px;border-radius:2px}
@@ -461,7 +461,72 @@ svg .taga{fill:#D9930C;rx:2}
 .gl .spkbox{margin-top:8px}
 .gl-m::before{content:"口訣　";font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;color:var(--amber);font-weight:400}
 @media (max-width:520px){.gl-grid{grid-template-columns:1fr}}
+
+/* ---------- Section 11 我的筆記 ---------- */
+.nbtn{font:inherit;font-size:11.5px;line-height:1;padding:4px 7px;border:1px solid var(--rule);background:var(--sheet);color:var(--blue);border-radius:2px;cursor:pointer;white-space:nowrap;flex:0 0 auto;margin-left:auto}
+.dim .nbtn{position:absolute;right:9px;bottom:9px;margin:0}
+.fxc .nbtn{position:absolute;right:12px;bottom:10px;margin:0}
+.fxc{position:relative;padding-bottom:38px}
+.dim{padding-bottom:34px}
+.nbtn.done{color:var(--green);border-color:var(--green);background:#EAF4EE}
+.trap li .nbtn{align-self:center}
+.mn .nbtn{background:transparent;color:#BFD6EE;border-color:rgba(255,255,255,.3);margin-top:8px}
+.mn .nbtn.done{color:#9FE0B8;border-color:#9FE0B8;background:transparent}
+.dbody > p .nbtn{margin-left:8px;vertical-align:1px}
+.gl .spkbox .nbtn,.mn .spkbox .nbtn{margin-top:0}
+.nb-flash{outline:3px solid var(--amber);outline-offset:3px;transition:outline-color .3s}
+.nb-demo{font-size:12px;padding:2px 6px;border:1px solid var(--rule);background:var(--sheet);color:var(--blue);border-radius:2px;white-space:nowrap}
+.nb-tabs{display:flex;gap:0;margin:10px 0 0}
+.nb-tab{font:inherit;font-size:14px;padding:8px 16px;border:1px solid var(--rule);border-bottom:none;background:transparent;color:var(--ink-2);cursor:pointer}
+.nb-tab.on{background:var(--sheet);color:var(--ink);font-weight:700;border-top:3px solid var(--blue)}
+.nb-tab+.nb-tab{border-left:none}
+.nb-form{background:var(--sheet);border:1px solid var(--rule);padding:12px;display:flex;flex-direction:column;gap:8px}
+.nb-form input[type=text],.nb-form textarea,#nb-q{width:100%;font:inherit;font-size:15px;padding:9px 11px;border:1px solid var(--rule);background:#fff;border-radius:2px;color:var(--ink)}
+.nb-form textarea{resize:vertical;line-height:1.6}
+.nb-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.nb-row input[type=text]{flex:1 1 180px;width:auto}
+.nb-star{font-size:13.5px;display:inline-flex;gap:5px;align-items:center;white-space:nowrap;cursor:pointer}
+.nb-btn{font:inherit;font-size:13.5px;padding:7px 13px;border:1px solid var(--rule);background:var(--sheet);color:var(--ink);border-radius:2px;cursor:pointer}
+.nb-btn.pri{background:var(--blue);color:#fff;border-color:var(--blue);font-weight:700}
+.nb-btn.pri:disabled{opacity:.4;cursor:default}
+.nb-btn.danger{color:var(--red);border-color:#E3B5B2}
+.nb-hint{font-size:12.5px;color:var(--ink-2)}
+.nb-prev{margin-top:4px;max-height:360px;overflow:auto;border-top:1px dotted var(--rule)}
+.nb-pi{display:flex;gap:8px;align-items:flex-start;padding:6px 0;border-bottom:1px dotted var(--rule-2);font-size:13.5px}
+.nb-pi select{flex:0 0 auto;font-size:12px;padding:3px 4px}
+.nb-bar{margin:18px 0 6px}
+.nb-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.nb-gh{display:flex;align-items:baseline;gap:8px}
+.nb-gh span{font-family:var(--mono);font-size:12px;color:var(--ink-2);font-weight:400}
+.nb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
+.nb-note{background:var(--sheet);border:1px solid var(--rule);border-left:4px solid var(--blue);padding:10px 12px 8px}
+.nb-note.imp{border-left-color:var(--amber);background:#FFFBF0}
+.nb-nh{display:flex;gap:6px;align-items:flex-start}
+.nb-nt{font-weight:700;font-size:15px;line-height:1.45}
+.nb-nb{font-size:13.5px;line-height:1.7;margin-top:5px;white-space:pre-wrap;word-break:break-word}
+.nb-meta{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin-top:8px;padding-top:6px;border-top:1px dotted var(--rule-2);font-size:11.5px;color:var(--ink-2)}
+.nb-tag{background:#E8EEF5;color:var(--blue);padding:1px 6px;border-radius:2px}
+.nb-tag.cat{background:var(--ink);color:var(--paper)}
+.nb-src{font-family:var(--mono)}
+.nb-act{margin-left:auto;display:inline-flex;gap:4px}
+.nb-ib{font:inherit;font-size:11.5px;padding:2px 6px;border:1px solid var(--rule);background:transparent;color:var(--ink-2);border-radius:2px;cursor:pointer}
+.nb-tog{border:none;font-size:17px;line-height:1;padding:0 2px;color:var(--amber)}
+.nb-del{color:var(--red)}
+.nb-empty{background:var(--sheet);border:1px dashed var(--rule);padding:18px;font-size:14px;color:var(--ink-2);line-height:1.8}
+.nb-imp{color:var(--amber)}
+.nb-tools{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.nb-toast{position:fixed;left:50%;bottom:90px;transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--paper);padding:9px 16px;border-radius:4px;font-size:14px;opacity:0;pointer-events:none;transition:all .2s;z-index:9999;max-width:88vw;text-align:center}
+.nb-toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+@media (max-width:520px){.nb-grid{grid-template-columns:1fr}.nb-act{margin-left:0}}
+@media print{
+  .nbtn,.nb-tabs,.nb-form,.nb-bar,.nb-tools,.nb-toast,.nb-act,.nb-tog{display:none!important}
+  body.nb-printing .wrap > *:not(main):not(section#notes){display:none!important}
+  body.nb-printing section:not(#notes){display:none!important}
+  body.nb-printing header,body.nb-printing .bar,body.nb-printing footer{display:none!important}
+  .nb-note{break-inside:avoid}
+}
 </style>
+
 </head>
 <body>
 
@@ -489,6 +554,7 @@ svg .taga{fill:#D9930C;rx:2}
       <a href="#exam">08 自我測驗</a>
       <a href="#audio">09 有聲複習</a>
       <a href="#laws">10 法規庫</a>
+      <a href="#notes">11 我的筆記</a>
     </nav>
   </header>
 </div>
@@ -4836,6 +4902,71 @@ attachButtons();
   </div>
 </section>
 
+<!-- ============ 11. 我的筆記 ============ -->
+<section id="notes">
+  <h2>Section 11</h2>
+  <div class="h2sub">我的筆記</div>
+  <p class="sub" style="color:var(--ink-2);font-size:13.5px">三種加法：<b>自己寫一則</b>、<b>一次貼上一大段</b>讓它自動拆開分類，或在全站任何卡片上按 <span class="nb-demo">＋筆記</span> 收進來。進來的筆記會依章節自動歸類，可以再手動改。</p>
+
+  <div class="nb-tabs" role="tablist">
+    <button type="button" class="nb-tab on" data-t="one">寫一則</button>
+    <button type="button" class="nb-tab" data-t="bulk">貼上整理</button>
+  </div>
+
+  <div class="nb-form" id="nb-one">
+    <input id="nb-title" type="text" placeholder="標題（可留空，自動取內容開頭）" autocomplete="off">
+    <textarea id="nb-body" rows="4" placeholder="內容：例如「局限空間進入許可要雇主、工作場所負責人或現場作業主管簽署，紀錄留 3 年」"></textarea>
+    <div class="nb-row">
+      <select id="nb-cat" class="exsel"></select>
+      <input id="nb-tags" type="text" placeholder="標籤，用逗號分隔：必考, 易錯" autocomplete="off">
+      <label class="nb-star"><input type="checkbox" id="nb-imp"> ★ 重點</label>
+    </div>
+    <div class="nb-row">
+      <button type="button" class="nb-btn pri" id="nb-save">儲存筆記</button>
+      <button type="button" class="nb-btn" id="nb-cancel" style="display:none">取消編輯</button>
+      <span class="nb-hint" id="nb-auto"></span>
+    </div>
+  </div>
+
+  <div class="nb-form" id="nb-bulk" style="display:none">
+    <textarea id="nb-paste" rows="7" placeholder="把你手機備忘錄、講義劃線、上課抄的東西整段貼進來。&#10;空一行＝一則筆記；每行開頭是「・」「-」「1.」也會各自拆成一則。&#10;含「必考／重要／★」的會自動標成重點。"></textarea>
+    <div class="nb-row">
+      <button type="button" class="nb-btn" id="nb-preview">預覽整理結果</button>
+      <button type="button" class="nb-btn pri" id="nb-import-bulk" disabled>全部加入</button>
+      <span class="nb-hint" id="nb-bulk-info"></span>
+    </div>
+    <div id="nb-bulk-prev"></div>
+  </div>
+
+  <div class="nb-bar">
+    <input id="nb-q" type="search" placeholder="搜尋我的筆記…" autocomplete="off">
+    <div class="nb-chips" id="nb-chips"></div>
+    <div class="nb-row" style="margin-top:6px">
+      <label class="nb-star"><input type="checkbox" id="nb-onlyimp"> 只看 ★ 重點</label>
+      <select id="nb-sort" class="exsel">
+        <option value="cat">依分類整理</option>
+        <option value="new">最新在前</option>
+        <option value="old">最舊在前</option>
+      </select>
+      <span class="nb-hint" id="nb-count"></span>
+    </div>
+  </div>
+
+  <div id="nb-list"></div>
+
+  <div class="nb-tools">
+    <button type="button" class="nb-btn" id="nb-export">匯出備份（JSON）</button>
+    <button type="button" class="nb-btn" id="nb-import">匯入備份</button>
+    <button type="button" class="nb-btn" id="nb-copy">複製全部文字</button>
+    <button type="button" class="nb-btn" id="nb-print">列印筆記</button>
+    <button type="button" class="nb-btn danger" id="nb-clear">清空</button>
+    <input type="file" id="nb-file" accept=".json,application/json" style="display:none">
+  </div>
+  <p class="nb-hint" style="margin-top:8px">筆記只存在這台裝置的這個瀏覽器裡，不會上傳。換手機或清除瀏覽資料前，請先「匯出備份」，到新裝置再「匯入備份」。</p>
+</section>
+<div class="nb-toast" id="nb-toast"></div>
+
+
 <script>
 (function(){
 'use strict';
@@ -5286,6 +5417,330 @@ renderGrid(); buildIndex(); fillWhich(); renderStore(); rebuildLocalSearch();
   })});
   q.addEventListener('input',run);
   q.addEventListener('keydown',function(e){e.stopPropagation()});
+})();
+</script>
+
+<script>
+/* ============ Section 11 我的筆記 ============ */
+(function(){
+  var sec=document.getElementById('notes'); if(!sec) return;
+  var KEY='osh_notes_v1';
+  var CATS=[
+    ['law','職安法・細則'],['org','管理辦法・組織'],['fac','設施規則'],['con','營造標準'],
+    ['mac','機械・高壓氣體'],['chm','化學・監測'],['hlt','健康保護'],['edu','教育訓練'],
+    ['base','勞基法・勞檢'],['calc','計算題'],['nw','新法・修法'],['gl','名詞與觀念'],['etc','其他']
+  ];
+  var CATN={}; CATS.forEach(function(c){CATN[c[0]]=c[1]});
+  // 自動分類：由上往下比對，先中先贏（越專一的放越前面）
+  var RULES=[
+    ['nw',/115\s*[.\/]\s*7\s*[.\/]\s*1|116\s*[.\/]\s*[17]\s*[.\/]\s*1|117\s*[.\/]\s*1|新法|修法|修正後|職場霸凌|霸凌|特定機械|主施工者|職安卡|外送/],
+    ['calc',/\bFR\b|\bSR\b|\bFSI\b|\bTWA\b|\bSTEL\b|ppm|mg\s*\/\s*m|換氣量|WBGT|dB|分貝|劑量|\bLEL\b|\bUEL\b|公式|計算|失能傷害|頻率|嚴重率|勒沙特列|變量係數/i],
+    ['con',/營造|施工架|模板|支撐|開挖|擋土|護欄|安全網|母索|屋頂|鋼構|拆除|腳趾板|壁連座|隧道/],
+    ['mac',/起重|吊掛|吊鉤|吊鏈|鋼索|馬鞍環|堆高機|危險性機械|危險性設備|鍋爐|壓力容器|高壓氣體|研磨|衝剪|升降機|吊籠|人字臂|型式驗證|TD|TC/],
+    ['chm',/有機溶劑|特化|特定化學|粉塵|鉛|石綿|SDS|GHS|通識|危害圖式|作業環境監測|監測|容許|缺氧|局限空間|呼吸防護|分級管理|局部排氣/],
+    ['hlt',/健康|健檢|體格|醫護|醫師|護理|母性|妊娠|夜間工作|異常工作負荷|人因|不法侵害|急救|特別危害/],
+    ['edu',/教育訓練|在職教育|業務主管|作業主管|訓練時數|訓練/],
+    ['org',/管理辦法|委員會|管理單位|管理人員|管理計畫|管理系統|管理制度|自動檢查|定期檢查|重點檢查|作業檢點|甲種|乙種|丙種|丁種|管理員|管理師|CNS\s*45001|PDCA/],
+    ['base',/勞基法|勞動基準|工資|特休|特別休假|工時|延長工時|勞動檢查|勞檢|檢查員|危險性工作場所|退休/],
+    ['fac',/設施規則|感電|漏電|電壓|照度|採光|通道|階梯|固定梯|移動梯|合梯|噪音|高溫|墜落|開口|換氣|危險物|易燃|閃火點/],
+    ['law',/職安法|施行細則|細則|承攬|共同作業|協議組織|通報|職災|立即發生危險|工作者|雇主/],
+    ['gl',/是什麼|定義|意思|名詞|縮寫/]
+  ];
+  // 先看有沒有寫明法規名稱（最準），沒有再用關鍵字猜
+  var SRC=[
+    ['nw',/工程安全設計|職場霸凌防治|勞工健康服務專業機構/],
+    ['fac',/設施規則/],['con',/營造(安全衛生設施)?標準/],['org',/管理辦法/],['hlt',/健保規則|健康保護規則|母性(健康保護)?辦法|母性/],
+    ['edu',/教育訓練規則/],['mac',/起重(升降機具安全)?規則|高壓氣體(勞工安全)?規則|危險性機械|鍋爐(及壓力容器)?(安全)?規則|機械設備器具/],
+    ['chm',/有機溶劑(中毒預防)?規則|特化標準|特定化學物質|粉塵(危害預防)?標準|鉛中毒|缺氧(症預防)?規則|監測辦法|通識規則|容許(暴露)?標準|分級管理辦法/],
+    ['base',/勞基法|勞動基準法|勞檢法|勞動檢查法|勞檢細則|危險性工作場所/],
+    ['law',/職安法|施行細則/]
+  ];
+  function guess(text){
+    for(var j=0;j<SRC.length;j++){ if(SRC[j][1].test(text)) return SRC[j][0] }
+    for(var i=0;i<RULES.length;i++){ if(RULES[i][1].test(text)) return RULES[i][0] }
+    return 'etc';
+  }
+  function load(){ try{ var r=localStorage.getItem(KEY); var a=r?JSON.parse(r):[]; return Array.isArray(a)?a:[] }catch(e){ return [] } }
+  var NOTES=load();
+  function save(){ try{ localStorage.setItem(KEY,JSON.stringify(NOTES)); return true }catch(e){ toast('瀏覽器不允許儲存（可能是私密瀏覽），筆記在關閉頁面後會消失'); return false } }
+  function uid(){ return Date.now().toString(36)+Math.random().toString(36).slice(2,7) }
+  function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]}) }
+  function clean(s){ return String(s||'').replace(/\s+/g,' ').trim() }
+  function autoTitle(body){ var b=clean(body).replace(/^[・\-\*•●▪︎\d.、)）\s]+/,''); var m=b.match(/^[^。；;，,：:]{2,22}/); return m?m[0]:b.slice(0,22) }
+  function isImp(text){ return /必考|重要|★|常考|易錯|一定要背/.test(text) }
+  function fmtDate(ts){ var d=new Date(ts); return (d.getFullYear()-1911)+'/'+(d.getMonth()+1)+'/'+d.getDate() }
+
+  var $=function(s){return sec.querySelector(s)}, $$=function(s){return [].slice.call(sec.querySelectorAll(s))};
+  var toastEl=document.getElementById('nb-toast'),tt;
+  function toast(msg){ toastEl.textContent=msg; toastEl.classList.add('on'); clearTimeout(tt); tt=setTimeout(function(){toastEl.classList.remove('on')},2200) }
+
+  /* ---- 表單 ---- */
+  var sel=$('#nb-cat');
+  sel.innerHTML='<option value="auto">自動分類</option>'+CATS.map(function(c){return '<option value="'+c[0]+'">'+c[1]+'</option>'}).join('');
+  var editing=null;
+  function updAuto(){
+    var t=$('#nb-title').value+' '+$('#nb-body').value;
+    $('#nb-auto').textContent=(sel.value==='auto'&&clean(t))?'會歸到：'+CATN[guess(t)]:'';
+  }
+  ['#nb-title','#nb-body'].forEach(function(s){ $(s).addEventListener('input',updAuto) });
+  sel.addEventListener('change',updAuto);
+  function resetForm(){
+    editing=null; $('#nb-title').value=''; $('#nb-body').value=''; $('#nb-tags').value=''; $('#nb-imp').checked=false;
+    sel.value='auto'; $('#nb-save').textContent='儲存筆記'; $('#nb-cancel').style.display='none'; updAuto();
+  }
+  $('#nb-save').addEventListener('click',function(){
+    var body=$('#nb-body').value.trim(), title=$('#nb-title').value.trim();
+    if(!body&&!title){ $('#nb-body').focus(); return }
+    var all=title+' '+body;
+    var cat=sel.value==='auto'?guess(all):sel.value;
+    var tags=$('#nb-tags').value.split(/[,，、\s]+/).map(clean).filter(Boolean);
+    if(editing){
+      var n=NOTES.filter(function(x){return x.id===editing})[0];
+      if(n){ n.title=title||autoTitle(body); n.body=body; n.cat=cat; n.tags=tags; n.imp=$('#nb-imp').checked; n.upd=Date.now() }
+      toast('已更新');
+    }else{
+      NOTES.push({id:uid(),title:title||autoTitle(body),body:body,cat:cat,tags:tags,imp:$('#nb-imp').checked||isImp(all),src:'',ts:Date.now()});
+      toast('已加入「'+CATN[cat]+'」');
+    }
+    save(); resetForm(); render();
+  });
+  $('#nb-cancel').addEventListener('click',resetForm);
+
+  /* ---- 分頁 ---- */
+  $$('.nb-tab').forEach(function(b){ b.addEventListener('click',function(){
+    $$('.nb-tab').forEach(function(x){x.classList.toggle('on',x===b)});
+    $('#nb-one').style.display=b.dataset.t==='one'?'':'none';
+    $('#nb-bulk').style.display=b.dataset.t==='bulk'?'':'none';
+  })});
+
+  /* ---- 批次貼上整理 ---- */
+  var PEND=[];
+  function splitBulk(raw){
+    var txt=String(raw||'').replace(/\r/g,'');
+    var blocks=txt.split(/\n\s*\n+/);
+    var out=[];
+    blocks.forEach(function(b){
+      var lines=b.split('\n').map(function(l){return l.trim()}).filter(Boolean);
+      if(!lines.length) return;
+      var bullet=/^([・\-\*•●▪︎]|\d{1,3}[.、)）]|[（(]\d{1,3}[)）]|[一二三四五六七八九十]+、)/;
+      var bulletCount=lines.filter(function(l){return bullet.test(l)}).length;
+      if(bulletCount>=2){
+        // 有標題行＋多個條列：標題併入每一則當前綴
+        var head=bullet.test(lines[0])?'':lines[0].replace(/[：:]$/,'');
+        var cur=null;
+        lines.forEach(function(l,i){
+          if(i===0&&head) return;
+          if(bullet.test(l)){ if(cur) out.push(cur); cur={head:head,body:l.replace(bullet,'').trim()} }
+          else if(cur){ cur.body+=' '+l }
+          else { out.push({head:'',body:l}) }
+        });
+        if(cur) out.push(cur);
+      }else{
+        out.push({head:'',body:lines.join(' ')});
+      }
+    });
+    return out.filter(function(x){return clean(x.body).length>=2}).map(function(x){
+      var body=clean(x.body), full=(x.head?x.head+'：':'')+body;
+      return {id:uid(),title:autoTitle(body),body:body,cat:guess(full),tags:x.head?[x.head]:[],imp:isImp(full),src:'貼上整理',ts:Date.now()};
+    });
+  }
+  $('#nb-preview').addEventListener('click',function(){
+    PEND=splitBulk($('#nb-paste').value);
+    var box=$('#nb-bulk-prev');
+    if(!PEND.length){ box.innerHTML=''; $('#nb-bulk-info').textContent='沒有拆出任何筆記'; $('#nb-import-bulk').disabled=true; return }
+    var cnt={}; PEND.forEach(function(n){cnt[n.cat]=(cnt[n.cat]||0)+1});
+    $('#nb-bulk-info').textContent='拆成 '+PEND.length+' 則：'+Object.keys(cnt).map(function(k){return CATN[k]+' '+cnt[k]}).join('、');
+    box.innerHTML='<div class="nb-prev">'+PEND.map(function(n,i){
+      return '<div class="nb-pi"><select class="exsel" data-i="'+i+'">'+CATS.map(function(c){return '<option value="'+c[0]+'"'+(c[0]===n.cat?' selected':'')+'>'+c[1]+'</option>'}).join('')+'</select>'
+        +'<span>'+(n.imp?'<b class="nb-imp">★</b> ':'')+esc(n.body)+'</span></div>';
+    }).join('')+'</div>';
+    $$('#nb-bulk-prev select').forEach(function(s){ s.addEventListener('change',function(){ PEND[+s.dataset.i].cat=s.value }) });
+    $('#nb-import-bulk').disabled=false;
+  });
+  $('#nb-import-bulk').addEventListener('click',function(){
+    if(!PEND.length) return;
+    NOTES=NOTES.concat(PEND); save();
+    toast('已加入 '+PEND.length+' 則筆記');
+    PEND=[]; $('#nb-paste').value=''; $('#nb-bulk-prev').innerHTML=''; $('#nb-bulk-info').textContent=''; $('#nb-import-bulk').disabled=true;
+    render();
+  });
+
+  /* ---- 清單 ---- */
+  var curCat='all';
+  function filtered(){
+    var q=clean($('#nb-q').value).toLowerCase(), onlyImp=$('#nb-onlyimp').checked;
+    return NOTES.filter(function(n){
+      if(curCat!=='all'&&n.cat!==curCat) return false;
+      if(onlyImp&&!n.imp) return false;
+      if(q){ var t=(n.title+' '+n.body+' '+(n.tags||[]).join(' ')+' '+(n.src||'')).toLowerCase(); if(t.indexOf(q)<0) return false }
+      return true;
+    });
+  }
+  function noteHTML(n){
+    return '<div class="nb-note'+(n.imp?' imp':'')+'" data-id="'+n.id+'">'
+      +'<div class="nb-nh"><button type="button" class="nb-ib nb-tog" title="標成重點">'+(n.imp?'★':'☆')+'</button>'
+      +'<div class="nb-nt">'+esc(n.title)+'</div></div>'
+      +(n.body&&n.body!==n.title?'<div class="nb-nb">'+esc(n.body)+'</div>':'')
+      +'<div class="nb-meta">'
+        +(n.tags||[]).map(function(t){return '<span class="nb-tag">#'+esc(t)+'</span>'}).join('')
+        +(n.src?'<span class="nb-src">'+esc(n.src)+'</span>':'')
+        +'<span class="nb-date">'+fmtDate(n.ts)+'</span>'
+        +'<span class="nb-act">'
+          +(n.ref?'<button type="button" class="nb-ib nb-go">原卡片</button>':'')
+          +'<button type="button" class="nb-ib nb-edit">編輯</button>'
+          +'<button type="button" class="nb-ib nb-del">刪除</button>'
+        +'</span>'
+      +'</div></div>';
+  }
+  function render(){
+    // 分類晶片（含數量）
+    var cnt={}; NOTES.forEach(function(n){cnt[n.cat]=(cnt[n.cat]||0)+1});
+    var chips='<button type="button" class="gl-c'+(curCat==='all'?' on':'')+'" data-c="all">全部 '+NOTES.length+'</button>';
+    CATS.forEach(function(c){ if(cnt[c[0]]) chips+='<button type="button" class="gl-c'+(curCat===c[0]?' on':'')+'" data-c="'+c[0]+'">'+c[1]+' '+cnt[c[0]]+'</button>' });
+    $('#nb-chips').innerHTML=chips;
+    $$('#nb-chips .gl-c').forEach(function(b){ b.addEventListener('click',function(){ curCat=b.dataset.c; render() }) });
+
+    var list=filtered(), sort=$('#nb-sort').value, box=$('#nb-list');
+    $('#nb-count').textContent=NOTES.length?('顯示 '+list.length+' / '+NOTES.length+' 則・★ '+NOTES.filter(function(n){return n.imp}).length):'';
+    if(!NOTES.length){
+      box.innerHTML='<div class="nb-empty"><b>還沒有筆記。</b><br>試試看：往上滑到任何一張數字卡、口訣或名詞卡，按右上角的「＋筆記」；或切到「貼上整理」把手機備忘錄整段貼進來。</div>';
+      return;
+    }
+    if(!list.length){ box.innerHTML='<div class="nb-empty">沒有符合的筆記。</div>'; return }
+    var h='';
+    if(sort==='cat'){
+      CATS.forEach(function(c){
+        var g=list.filter(function(n){return n.cat===c[0]});
+        if(!g.length) return;
+        g.sort(function(a,b){ return (b.imp-a.imp)||(a.ts-b.ts) });
+        h+='<h3 class="nb-gh">'+c[1]+'<span>'+g.length+'</span></h3><div class="nb-grid">'+g.map(noteHTML).join('')+'</div>';
+      });
+    }else{
+      list=list.slice().sort(function(a,b){return sort==='new'?b.ts-a.ts:a.ts-b.ts});
+      h='<div class="nb-grid">'+list.map(function(n){ return noteHTML(n).replace('<div class="nb-meta">','<div class="nb-meta"><span class="nb-tag cat">'+CATN[n.cat]+'</span>') }).join('')+'</div>';
+    }
+    box.innerHTML=h;
+  }
+  $('#nb-q').addEventListener('input',render);
+  $('#nb-onlyimp').addEventListener('change',render);
+  $('#nb-sort').addEventListener('change',render);
+  $('#nb-list').addEventListener('click',function(e){
+    var card=e.target.closest('.nb-note'); if(!card) return;
+    var n=NOTES.filter(function(x){return x.id===card.dataset.id})[0]; if(!n) return;
+    if(e.target.closest('.nb-tog')){ n.imp=!n.imp; save(); render(); return }
+    if(e.target.closest('.nb-del')){ if(confirm('刪除這則筆記？\n\n'+n.title)){ NOTES=NOTES.filter(function(x){return x!==n}); save(); render(); toast('已刪除') } return }
+    if(e.target.closest('.nb-edit')){
+      $$('.nb-tab')[0].click();
+      editing=n.id; $('#nb-title').value=n.title; $('#nb-body').value=n.body; sel.value=n.cat; $('#nb-tags').value=(n.tags||[]).join(', ');
+      $('#nb-imp').checked=!!n.imp; $('#nb-save').textContent='更新筆記'; $('#nb-cancel').style.display=''; updAuto();
+      $('#nb-one').scrollIntoView({block:'center'}); $('#nb-body').focus(); return;
+    }
+    if(e.target.closest('.nb-go')){
+      var el=document.querySelector('[data-nref="'+n.ref+'"]');
+      if(!el){ toast('找不到原卡片（頁面內容可能改版了）'); return }
+      var d=el.closest('details'); if(d) d.open=true;
+      el.scrollIntoView({block:'center'}); el.classList.add('nb-flash'); setTimeout(function(){el.classList.remove('nb-flash')},1600);
+    }
+  });
+
+  /* ---- 工具列 ---- */
+  $('#nb-export').addEventListener('click',function(){
+    var blob=new Blob([JSON.stringify({app:'osh-notes',v:1,exported:new Date().toISOString(),notes:NOTES},null,1)],{type:'application/json'});
+    var a=document.createElement('a'); var d=new Date();
+    a.href=URL.createObjectURL(blob); a.download='職安筆記_'+(d.getFullYear()-1911)+String(d.getMonth()+1).padStart(2,'0')+String(d.getDate()).padStart(2,'0')+'.json';
+    document.body.appendChild(a); a.click(); setTimeout(function(){URL.revokeObjectURL(a.href); a.remove()},500);
+  });
+  $('#nb-import').addEventListener('click',function(){ $('#nb-file').click() });
+  $('#nb-file').addEventListener('change',function(){
+    var f=this.files&&this.files[0]; if(!f) return;
+    var r=new FileReader();
+    r.onload=function(){
+      try{
+        var j=JSON.parse(r.result), arr=Array.isArray(j)?j:(j.notes||[]);
+        var have={}; NOTES.forEach(function(n){have[n.id]=1});
+        var add=arr.filter(function(n){return n&&n.id&&(n.title||n.body)&&!have[n.id]}).map(function(n){
+          return {id:n.id,title:String(n.title||''),body:String(n.body||''),cat:CATN[n.cat]?n.cat:guess(n.title+' '+n.body),tags:Array.isArray(n.tags)?n.tags:[],imp:!!n.imp,src:String(n.src||''),ref:n.ref||'',ts:+n.ts||Date.now()};
+        });
+        NOTES=NOTES.concat(add); save(); render(); toast('匯入 '+add.length+' 則（重複的已略過）');
+      }catch(e){ toast('檔案格式不對，請選「匯出備份」產生的 JSON') }
+    };
+    r.readAsText(f); this.value='';
+  });
+  function asText(){
+    var out=[];
+    CATS.forEach(function(c){
+      var g=NOTES.filter(function(n){return n.cat===c[0]}); if(!g.length) return;
+      out.push('【'+c[1]+'】');
+      g.forEach(function(n){ out.push((n.imp?'★ ':'・')+n.title+(n.body&&n.body!==n.title?'：'+n.body:'')+((n.tags||[]).length?'  #'+n.tags.join(' #'):'')) });
+      out.push('');
+    });
+    return out.join('\n');
+  }
+  $('#nb-copy').addEventListener('click',function(){
+    if(!NOTES.length){ toast('還沒有筆記'); return }
+    var t=asText();
+    function fallback(){ var ta=document.createElement('textarea'); ta.value=t; ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); try{document.execCommand('copy'); toast('已複製')}catch(e){toast('複製失敗')} ta.remove() }
+    if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(t).then(function(){toast('已複製 '+NOTES.length+' 則，可貼到備忘錄')},fallback) } else fallback();
+  });
+  $('#nb-print').addEventListener('click',function(){
+    if(!NOTES.length){ toast('還沒有筆記'); return }
+    document.body.classList.add('nb-printing'); window.print();
+    setTimeout(function(){document.body.classList.remove('nb-printing')},800);
+  });
+  $('#nb-clear').addEventListener('click',function(){
+    if(!NOTES.length) return;
+    if(confirm('清空全部 '+NOTES.length+' 則筆記？建議先匯出備份。')&&confirm('真的要清空嗎？這個動作無法復原。')){ NOTES=[]; save(); render(); toast('已清空') }
+  });
+  // 輸入框內按鍵不要觸發全站熱鍵
+  $$('input,textarea,select').forEach(function(el){ el.addEventListener('keydown',function(e){e.stopPropagation()}) });
+
+  /* ---- 全站「＋筆記」按鈕 ---- */
+  function cardText(el){
+    var c=el.cloneNode(true);
+    [].slice.call(c.querySelectorAll('.spkbox,.spk,.nbtn,svg')).forEach(function(x){x.remove()});
+    return clean(c.textContent);
+  }
+  function secName(el){
+    var s=el.closest('section'); if(!s) return '';
+    var h=s.querySelector('.h2sub'); return h?clean(h.textContent):'';
+  }
+  function cardTitle(el){
+    if(el.matches('.dim')){ var v=el.querySelector('.val'),l=el.querySelector('.lab'); return clean((l?l.textContent:'')).slice(0,30)+(v?'＝'+clean(v.textContent):'') }
+    var k=el.querySelector(':scope > .k, :scope > .gl-t, h4');
+    if(el.matches('.gl')){ var gt=el.querySelector('.gl-t').cloneNode(true),ga=gt.querySelector('.gl-ab'); var abt=ga?clean(ga.textContent).split('｜')[0]:''; if(ga) ga.remove(); return clean(gt.textContent)+(abt?'（'+abt+'）':'') }
+    if(el.matches('.mn,.fxc')&&k) return clean(k.textContent).slice(0,30);
+    if(el.matches('li,p')){
+      var b=el.querySelector(':scope > b');
+      var all=cardText(el);
+      if(b){ var bt=clean(b.textContent); var rest=clean(all.slice(all.indexOf(bt)+bt.length)).replace(/^[：:，,]\s*/,'');
+        return (bt+'｜'+rest).slice(0,32) }
+    }
+    return autoTitle(cardText(el));
+  }
+  var SELS=['#update .dim','#update .trap li','#numbers .dim','#traps .trap li','#mn .mn','#gloss .gl','#calc .fxc','#chapters .dbody > p'];
+  function hash(s){ var h=5381; for(var i=0;i<s.length;i++){ h=((h<<5)+h+s.charCodeAt(i))|0 } return 'h'+(h>>>0).toString(36) }
+  function makeBtn(el){
+    if(el.getAttribute('data-nref')) return;
+    var ref=hash(cardText(el)); el.setAttribute('data-nref',ref);
+    var b=document.createElement('button'); b.type='button'; b.className='nbtn'; b.textContent='＋筆記'; b.title='收進我的筆記';
+    b.addEventListener('click',function(e){
+      e.stopPropagation(); e.preventDefault();
+      var body=cardText(el), title=cardTitle(el), src=secName(el);
+      if(NOTES.some(function(n){return n.ref===ref&&n.body===body})){ toast('這張已經在筆記裡了'); return }
+      var cat=guess(title+' '+body+' '+src);
+      if(/名詞解說/.test(src)) cat='gl'; else if(/計算題/.test(src)) cat='calc'; else if(/法規更新/.test(src)) cat='nw';
+      NOTES.push({id:uid(),title:title,body:body,cat:cat,tags:[],imp:false,src:src,ref:ref,ts:Date.now()});
+      save(); render(); b.classList.add('done'); b.textContent='✓ 已收'; toast('已收進「'+CATN[cat]+'」');
+    });
+    var box=el.querySelector(':scope > .spkbox');
+    if(el.matches('.dim,.fxc')) el.appendChild(b);
+    else if(box) box.appendChild(b); else el.appendChild(b);
+  }
+  SELS.forEach(function(s){ [].slice.call(document.querySelectorAll(s)).forEach(makeBtn) });
+  // 已收過的卡片顯示勾勾
+  NOTES.forEach(function(n){ if(!n.ref) return; var el=document.querySelector('[data-nref="'+n.ref+'"]'); var b=el&&el.querySelector('.nbtn'); if(b){ b.classList.add('done'); b.textContent='✓ 已收' } });
+
+  render(); updAuto();
 })();
 </script>
 </body>
